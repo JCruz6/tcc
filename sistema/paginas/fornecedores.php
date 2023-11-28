@@ -1,22 +1,18 @@
 <?php 
-$pag = 'fornecedores';
+	$pag = 'fornecedores';
 
-//verificar se ele tem a permissão de estar nessa página
-if(@$fornecedores == 'ocultar'){
-    echo "<script>window.location='../index.php'</script>";
-    exit();
-}
-
- ?>
+	//verificar se ele tem a permissão de estar nessa página
+	if(@$fornecedores == 'ocultar'){
+		echo "<script>window.location='../index.php'</script>";
+		exit();
+	}
+?>
 
  <a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Novo Fornecedor</a>
-
 
 <div class="bs-example widget-shadow" style="padding:15px" id="listar">
 	
 </div>
-
-
 
 <!-- Modal Inserir/Editar -->
 <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -31,7 +27,6 @@ if(@$fornecedores == 'ocultar'){
 			<form id="form">
 			<div class="modal-body">
 				
-
 					<div class="row">
 						<div class="col-md-6">							
 								<label>Nome</label>
@@ -43,7 +38,6 @@ if(@$fornecedores == 'ocultar'){
 								<input type="email" class="form-control" id="email" name="email" placeholder="Seu Email" >							
 						</div>
 					</div>
-
 
 					<div class="row">
 						<div class="col-md-4">							
@@ -64,11 +58,7 @@ if(@$fornecedores == 'ocultar'){
 								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="">							
 						</div>
 
-						
 					</div>
-
-
-							
 
 					<div class="row">
 						<div class="col-md-12">							
@@ -78,14 +68,9 @@ if(@$fornecedores == 'ocultar'){
 						
 					</div>
 
-
-					
-
-
 					<input type="hidden" name="id" id="id">
 					<input type="hidden" name="id_empresa" id="id_empresa">
 				
-
 				<br>
 				<small><div id="mensagem" align="center"></div></small>
 			</div>
@@ -96,11 +81,6 @@ if(@$fornecedores == 'ocultar'){
 		</div>
 	</div>
 </div>
-
-
-
-
-
 
 <!-- Modal Inserir/Editar -->
 <div class="modal fade" id="modalDados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -115,45 +95,43 @@ if(@$fornecedores == 'ocultar'){
 			<div class="modal-body">	
 					
 					<div class="row" style="margin-top: 0px">
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Telefone: </b></span><span id="telefone_dados"></span>
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Email: </b></span><span id="email_dados"></span>
+						</div>
+
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>CPF / CNPJ </b></span><span id="cpf_dados"></span>
+						</div>
 					</div>
 
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>CPF / CNPJ </b></span><span id="cpf_dados"></span>
+					<div class="row">
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Telefone: </b></span><span id="telefone_dados"></span>
+						</div>
+
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Pessoa: </b></span><span id="pessoa_dados"></span>
+						</div>
 					</div>
 
-					<div class="col-md-12" style="margin-bottom: 5px">
-						<span><b>Email: </b></span><span id="email_dados"></span>
+					<div class="row">
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Data Cadastro: </b></span><span id="data_cad_dados"></span>
+						</div>
 					</div>
-									
 					
-
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Data Cadastro: </b></span><span id="data_cad_dados"></span>
+					<div class="row">
+						<div class="col-md-12" style="margin-bottom: 5px">
+							<span><b>Endereço: </b></span><span id="endereco_dados"></span>
+						</div>
 					</div>
-
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Pessoa: </b></span><span id="pessoa_dados"></span>
-					</div>
-
-					<div class="col-md-12" style="margin-bottom: 5px">
-						<span><b>Endereço: </b></span><span id="endereco_dados"></span>
-					</div>
-				</div>
-					
 			</div>	
-
-			
-
 		</div>
 	</div>
 </div>
 
-
 <script type="text/javascript">var pag = "<?=$pag?>"</script>
 <script src="js/ajax.js"></script>
-
 
 <script type="text/javascript">
 	function mudarPessoa(){

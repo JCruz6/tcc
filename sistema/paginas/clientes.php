@@ -31,7 +31,6 @@ if(@$clientes == 'ocultar'){
 			<form id="form">
 			<div class="modal-body">
 				
-
 					<div class="row">
 						<div class="col-md-6">							
 								<label>Nome</label>
@@ -44,7 +43,6 @@ if(@$clientes == 'ocultar'){
 						</div>
 					</div>
 
-
 					<div class="row">
 						<div class="col-md-6">							
 								<label>Telefone</label>
@@ -55,29 +53,18 @@ if(@$clientes == 'ocultar'){
 								<label>CPF</label>
 								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Seu CPF">							
 						</div>
-
-						
 					</div>
-
-
-							
 
 					<div class="row">
 						<div class="col-md-12">							
 								<label>Endereço</label>
 								<input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" >							
 						</div>
-						
 					</div>
-
-
-					
-
 
 					<input type="hidden" name="id" id="id">
 					<input type="hidden" name="id_empresa" id="id_empresa">
 				
-
 				<br>
 				<small><div id="mensagem" align="center"></div></small>
 			</div>
@@ -88,11 +75,6 @@ if(@$clientes == 'ocultar'){
 		</div>
 	</div>
 </div>
-
-
-
-
-
 
 <!-- Modal Inserir/Editar -->
 <div class="modal fade" id="modalDados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -107,41 +89,34 @@ if(@$clientes == 'ocultar'){
 			<div class="modal-body">	
 					
 					<div class="row" style="margin-top: 0px">
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Telefone: </b></span><span id="telefone_dados"></span>
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Email: </b></span><span id="email_dados"></span>
+						</div>
+
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>CPF: </b></span><span id="cpf_dados"></span>
+						</div>
 					</div>
 
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>CPF: </b></span><span id="cpf_dados"></span>
-					</div>
+					<div class="row">
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Telefone: </b></span><span id="telefone_dados"></span>
+						</div>
 
-					<div class="col-md-12" style="margin-bottom: 5px">
-						<span><b>Email: </b></span><span id="email_dados"></span>
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Data Cadastro: </b></span><span id="data_cad_dados"></span>
+						</div>
 					</div>
-									
 					
-
-					<div class="col-md-12" style="margin-bottom: 5px">
-						<span><b>Data Cadastro: </b></span><span id="data_cad_dados"></span>
+					<div class="row">
+						<div class="col-md-12" style="margin-bottom: 5px">
+							<span><b>Endereço: </b></span><span id="endereco_dados"></span>
+						</div>
 					</div>
-
-					<div class="col-md-12" style="margin-bottom: 5px">
-						<span><b>Endereço: </b></span><span id="endereco_dados"></span>
-					</div>
-				</div>
-					
 			</div>	
-
-			
-
 		</div>
 	</div>
 </div>
-
-
-
-
-
 
 <!-- Modal Arquivos -->
 <div class="modal fade" id="modalArquivos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

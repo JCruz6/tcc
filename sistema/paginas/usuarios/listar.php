@@ -33,7 +33,6 @@ $nivel = $res[$i]['nivel'];
 $ativo = $res[$i]['ativo'];
 $data_cad = $res[$i]['data'];
 $endereco = $res[$i]['endereco'];
-$senha = $res[$i]['senha'];
 	
 $data_cadF = implode('/', array_reverse(explode('-', $data_cad)));
 
@@ -50,10 +49,7 @@ if($ativo == 'Sim'){
 }
 
 $classe_adm = '';
-if($nivel == 'Administrador'){
-	$senha = '********';
-	$classe_adm = 'ocultar';
-}		
+		
 
 echo <<<HTML
 <tr style="color:{$classe_ativo}">
@@ -78,7 +74,7 @@ echo <<<HTML
 </li>
 
 
-<big><a href="#" onclick="mostrar('{$nome}','{$email}','{$telefone}','{$cpf}','{$endereco}','{$ativo}','{$data_cadF}', '{$senha}', '{$nivel}')" title="Mostrar Dados"><i class="fa fa-info-circle text-primary"></i></a></big>
+<big><a href="#" onclick="mostrar('{$nome}','{$email}','{$telefone}','{$cpf}','{$endereco}','{$ativo}','{$data_cadF}', '{$nivel}')" title="Mostrar Dados"><i class="fa fa-info-circle text-primary"></i></a></big>
 
 
 <big><a href="#" onclick="ativar('{$id}', '{$acao}')" title="{$titulo_link}"><i class="fa {$icone} text-success"></i></a></big>
@@ -138,13 +134,12 @@ HTML;
 
 
 
-	function mostrar(nome, email, telefone, cpf, endereco, ativo, data_cad, senha, nivel){
+	function mostrar(nome, email, telefone, cpf, endereco, ativo, data_cad, nivel){
 		
 		$('#titulo_dados').text(nome);
 		$('#email_dados').text(email);
 		$('#telefone_dados').text(telefone);
 		$('#cpf_dados').text(cpf);
-		$('#senha_dados').text(senha);
 		
 		$('#nivel_dados').text(nivel);
 		$('#endereco_dados').text(endereco);	

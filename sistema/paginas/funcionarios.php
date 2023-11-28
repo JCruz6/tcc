@@ -31,7 +31,6 @@ if(@$funcionarios == 'ocultar'){
 			<form id="form">
 			<div class="modal-body">
 				
-
 					<div class="row">
 						<div class="col-md-6">							
 								<label>Nome</label>
@@ -43,7 +42,6 @@ if(@$funcionarios == 'ocultar'){
 								<input type="email" class="form-control" id="email" name="email" placeholder="Seu Email" >							
 						</div>
 					</div>
-
 
 					<div class="row">
 						<div class="col-md-4">							
@@ -72,9 +70,6 @@ if(@$funcionarios == 'ocultar'){
 						</div>
 					</div>
 
-
-							
-
 					<div class="row">
 						<div class="col-md-12">							
 								<label>Endereço</label>
@@ -82,10 +77,6 @@ if(@$funcionarios == 'ocultar'){
 						</div>
 						
 					</div>
-
-
-					
-
 
 					<input type="hidden" name="id" id="id">
 					<input type="hidden" name="id_empresa" id="id_empresa">
@@ -102,11 +93,6 @@ if(@$funcionarios == 'ocultar'){
 	</div>
 </div>
 
-
-
-
-
-
 <!-- Modal Inserir/Editar -->
 <div class="modal fade" id="modalDados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -120,44 +106,45 @@ if(@$funcionarios == 'ocultar'){
 			<div class="modal-body">	
 					
 					<div class="row" style="margin-top: 0px">
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Telefone: </b></span><span id="telefone_dados"></span>
-					</div>
 
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>CPF: </b></span><span id="cpf_dados"></span>
-					</div>
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Email: </b></span><span id="email_dados"></span>
+						</div>
 
-					<div class="col-md-8" style="margin-bottom: 5px">
-						<span><b>Email: </b></span><span id="email_dados"></span>
-					</div>
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>CPF: </b></span><span id="cpf_dados"></span>
+						</div>
 
+					</div>					
 					
+					<div class="row">
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Telefone: </b></span><span id="telefone_dados"></span>
+						</div>
+						
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Nível: </b></span><span id="nivel_dados"></span>
+						</div>
 
-					<div class="col-md-4" style="margin-bottom: 5px">
-						<span><b>Senha: </b></span><span id="senha_dados"></span>
 					</div>
+					
+					<div class="row">
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Data Cadastro: </b></span><span id="data_cad_dados"></span>
+						</div>
 
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Nível: </b></span><span id="nivel_dados"></span>
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Ativo: </b></span><span id="ativo_dados"></span>
+						</div>
+					</div>					
+					
+					<div class="row">
+						<div class="col-md-12" style="margin-bottom: 5px">
+							<span><b>Endereço: </b></span><span id="endereco_dados"></span>
+						</div>
 					</div>
-
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Ativo: </b></span><span id="ativo_dados"></span>
-					</div>
-
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Data Cadastro: </b></span><span id="data_cad_dados"></span>
-					</div>
-
-					<div class="col-md-12" style="margin-bottom: 5px">
-						<span><b>Endereço: </b></span><span id="endereco_dados"></span>
-					</div>
-				</div>
 					
 			</div>	
-
-			
 
 		</div>
 	</div>

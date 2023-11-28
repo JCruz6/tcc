@@ -8,7 +8,7 @@
 	}
 ?>
 
- <a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Novo Funcionário</a>
+ <a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Novo Usuário</a>
 
 <div class="bs-example widget-shadow" style="padding:15px" id="listar">
 	
@@ -113,39 +113,40 @@
 			<div class="modal-body">	
 					
 					<div class="row" style="margin-top: 0px">
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Telefone: </b></span><span id="telefone_dados"></span>
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Telefone: </b></span><span id="telefone_dados"></span>
+						</div>
+
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>CPF: </b></span><span id="cpf_dados"></span>
+						</div>
+					</div>			
+
+					<div class="row">
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Email: </b></span><span id="email_dados"></span>
+						</div>
+
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Nível: </b></span><span id="nivel_dados"></span>
+						</div>				
+					</div>		
+
+					<div class="row">
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Ativo: </b></span><span id="ativo_dados"></span>
+						</div>
+
+						<div class="col-md-6" style="margin-bottom: 5px">
+							<span><b>Data Cadastro: </b></span><span id="data_cad_dados"></span>
+						</div>
 					</div>
 
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>CPF: </b></span><span id="cpf_dados"></span>
+					<div class="row">
+						<div class="col-md-12" style="margin-bottom: 5px">
+							<span><b>Endereço: </b></span><span id="endereco_dados"></span>
+						</div>
 					</div>
-
-					<div class="col-md-8" style="margin-bottom: 5px">
-						<span><b>Email: </b></span><span id="email_dados"></span>
-					</div>
-
-					<div class="col-md-4" style="margin-bottom: 5px">
-						<span><b>Senha: </b></span><span id="senha_dados"></span>
-					</div>
-
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Nível: </b></span><span id="nivel_dados"></span>
-					</div>
-
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Ativo: </b></span><span id="ativo_dados"></span>
-					</div>
-
-					<div class="col-md-6" style="margin-bottom: 5px">
-						<span><b>Data Cadastro: </b></span><span id="data_cad_dados"></span>
-					</div>
-
-					<div class="col-md-12" style="margin-bottom: 5px">
-						<span><b>Endereço: </b></span><span id="endereco_dados"></span>
-					</div>
-				</div>
-					
 			</div>	
 
 			
