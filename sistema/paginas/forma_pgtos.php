@@ -34,17 +34,20 @@ if(@$formas_pgto == 'ocultar'){
 				
 
 					<div class="row">
-						<div class="col-md-6">							
-								<label>Nome</label>
-								<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Cargo" required>							
+						<div class="col-md-4">							
+								
+								<input type="text" class="form-control" id="nome" name="nome" placeholder="Forma de Pagamento" required>							
 						</div>
 
-						<div class="col-md-3">							
-								<label>Acréscimo %</label>
-								<input type="number" class="form-control" id="acrescimo" name="acrescimo" placeholder="Valor em %" value="0">							
+						<div class="col-md-5">							
+								
+								<input type="number" class="form-control" id="acrescimo" name="acrescimo" placeholder="Acréscimo em % (Cartão)" value="0">							
 						</div>
 
-						<div class="col-md-3">										
+					</div>
+
+					<div class="row">
+					<div class="col-md-3">										
 								<button type="submit" class="btn btn-primary" style="margin-top:20px">Salvar</button>							
 						</div>
 					</div>

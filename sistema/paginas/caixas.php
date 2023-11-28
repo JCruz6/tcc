@@ -36,7 +36,7 @@ if(@$caixas == 'ocultar'){
 					<div class="row">
 						<div class="col-md-9">							
 								<label>Nome</label>
-								<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Cargo" required>							
+								<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Caixa" required>							
 						</div>
 
 						<div class="col-md-3">										

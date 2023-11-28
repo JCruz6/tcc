@@ -1,21 +1,18 @@
 <?php 
-$pag = 'usuarios';
+	$pag = 'usuarios';
 
-//verificar se ele tem a permissão de estar nessa página
-if(@$usuarios == 'ocultar'){
-    echo "<script>window.location='../index.php'</script>";
-    exit();
-}
- ?>
+	//verificar se ele tem a permissão de estar nessa página
+	if(@$usuarios == 'ocultar'){
+		echo "<script>window.location='../index.php'</script>";
+		exit();
+	}
+?>
 
- <a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Novo Usuário</a>
-
+ <a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Novo Funcionário</a>
 
 <div class="bs-example widget-shadow" style="padding:15px" id="listar">
 	
 </div>
-
-
 
 <!-- Modal Inserir/Editar -->
 <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -30,7 +27,6 @@ if(@$usuarios == 'ocultar'){
 			<form id="form">
 			<div class="modal-body">
 				
-
 					<div class="row">
 						<div class="col-md-6">							
 								<label>Nome</label>
@@ -42,7 +38,6 @@ if(@$usuarios == 'ocultar'){
 								<input type="email" class="form-control" id="email" name="email" placeholder="Seu Email" >							
 						</div>
 					</div>
-
 
 					<div class="row">
 						<div class="col-md-4">							
@@ -71,9 +66,18 @@ if(@$usuarios == 'ocultar'){
 						</div>
 					</div>
 
+					<div class="row">
+					<div class="col-md-4">							
+								<label>Senha</label>
+								<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required >							
+						</div>
 
-							
-
+						<div class="col-md-4">							
+								<label>Confirmar Senha</label>
+								<input type="password" class="form-control" id="conf_senha" name="conf_senha" placeholder="Confirmar Senha" required>							
+						</div>
+					</div>					
+						
 					<div class="row">
 						<div class="col-md-12">							
 								<label>Endereço</label>
@@ -82,14 +86,9 @@ if(@$usuarios == 'ocultar'){
 						
 					</div>
 
-
-					
-
-
 					<input type="hidden" name="id" id="id">
 					<input type="hidden" name="id_empresa" id="id_empresa">
 				
-
 				<br>
 				<small><div id="mensagem" align="center"></div></small>
 			</div>
@@ -100,11 +99,6 @@ if(@$usuarios == 'ocultar'){
 		</div>
 	</div>
 </div>
-
-
-
-
-
 
 <!-- Modal Inserir/Editar -->
 <div class="modal fade" id="modalDados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -130,8 +124,6 @@ if(@$usuarios == 'ocultar'){
 					<div class="col-md-8" style="margin-bottom: 5px">
 						<span><b>Email: </b></span><span id="email_dados"></span>
 					</div>
-
-					
 
 					<div class="col-md-4" style="margin-bottom: 5px">
 						<span><b>Senha: </b></span><span id="senha_dados"></span>
@@ -161,10 +153,6 @@ if(@$usuarios == 'ocultar'){
 		</div>
 	</div>
 </div>
-
-
-
-
 
 
 <!-- Modal -->
@@ -204,17 +192,7 @@ if(@$usuarios == 'ocultar'){
 				<br>
 				<input type="hidden" name="id" id="id-usuario-perm"> 
 				<small><div id="mensagem-permissao" align="center" class="mt-3"></div></small>		
-
-				
-
-				
-
-
 			</div>	
-
-
-			
-
 		</div>
 	</div>
 </div>

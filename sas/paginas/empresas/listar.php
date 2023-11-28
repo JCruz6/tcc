@@ -79,7 +79,7 @@ echo <<<HTML
 
 <big><a href="#" onclick="editar('{$id}','{$nome}','{$email}','{$telefone}','{$cpf}','{$cnpj}','{$valor}','{$data_pgto}','{$endereco}')" title="Editar Dados"><i class="fa fa-edit text-primary"></i></a></big>
 
-<big><a href="#" onclick="excluirModal('{$id}','{$nome}')" title="Anexar Arquivo"><i class="fa fa-trash-o text-danger"></i></a></big>
+<big><a href="#" onclick="excluirModal('{$id}','{$nome}')" title="Excluir"><i class="fa fa-trash-o text-danger"></i></a></big>
 
 <big><a href="#" onclick="mostrar('{$nome}','{$email}','{$telefone}','{$cpf}','{$cnpj}','{$valorF}','{$data_pgtoF}','{$endereco}','{$ativo}','{$data_cadF}')" title="Mostrar Dados"><i class="fa fa-info-circle text-primary"></i></a></big>
 

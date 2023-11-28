@@ -10,7 +10,7 @@ $nivel = $_POST['nivel'];
 $id = $_POST['id'];
 $id_empresa = $_POST['id_empresa'];
 
-$senha = '123';
+$senha = $_POST['senha'];
 $senha_crip = md5($senha);
 
 
@@ -42,7 +42,7 @@ if($email != ""){
 
 
 if($id == ""){
-	$query = $pdo->prepare("INSERT into $tabela SET empresa = '$id_empresa', nome = :nome, email = :email, telefone = :telefone, cpf = :cpf, ativo = 'Sim', data = curDate(), endereco = :endereco, nivel = '$nivel', foto = 'sem-foto.jpg', senha = '123', senha_crip = '$senha_crip' "); 	
+	$query = $pdo->prepare("INSERT into $tabela SET empresa = '$id_empresa', nome = :nome, email = :email, telefone = :telefone, cpf = :cpf, ativo = 'Sim', data = curDate(), endereco = :endereco, nivel = '$nivel', foto = 'sem-foto.jpg', senha = '$senha', senha_crip = '$senha_crip' "); 	
 
 }else{
 	$query = $pdo->prepare("UPDATE $tabela SET nome = :nome, email = :email, telefone = :telefone, cpf = :cpf, ativo = 'Sim', endereco = :endereco, nivel = '$nivel' WHERE id = '$id' ");

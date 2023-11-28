@@ -188,7 +188,7 @@ require_once("verificar.php");
 							<li class="header">MENU NAVEGAÇÃO</li>
 							<li class="treeview">
 								<a href="index.php">
-									<i class="fa fa-dashboard"></i> <span>Home</span>
+									<i class="fa fa-home"></i> <span>Página Inicial</span>
 								</a>
 							</li>
 							<li class="treeview">
