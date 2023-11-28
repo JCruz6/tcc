@@ -125,7 +125,7 @@
                     <h2>Recuperar Senha</h2>
                     <p>Digite o <strong>endereço de email</strong> or <strong>nomde de usuário</strong> da conta e <strong>clique em enviar</strong></p>
                     <p>Enviaremos por e-mail instruções sobre como redefinir sua senha..</p>
-                    <form class="recovery-form" action="" method="post">
+                    <form class="recovery-form" action="/PHPMailer/mail.php" method="post">
                         <input type="text" class="input" id="user_recover" placeholder="Insira email ou nome de usuário aqui">
                         <input type="submit" class="button" value="Enviar">
                     </form>
@@ -309,4 +309,44 @@ $(function() {
 });
 //# sourceURL=pen.js
 </script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript"> //Recuperar Senha
+  $("#form-recuperar").submit(function () {
+
+    event.preventDefault();
+    var formData = new FormData(this);
+
+    $.ajax({
+      url: "recuperar-senha.php",
+      type: 'POST',
+      data: formData,
+
+      success: function (mensagem) {
+        $('#mensagem-recuperar').text('');
+        $('#mensagem-recuperar').removeClass()
+        if (mensagem.trim() == "Recuperado com Sucesso") {
+          //$('#btn-fechar-rec').click();         
+          $('#email-recuperar').val('');
+          $('#mensagem-recuperar').addClass('text-success')
+          $('#mensagem-recuperar').text('Sua Senha foi enviada para o Email')     
+
+        } else {
+
+          $('#mensagem-recuperar').addClass('text-danger')
+          $('#mensagem-recuperar').text(mensagem)
+        }
+
+      },
+
+      cache: false,
+      contentType: false,
+      processData: false,
+
+    });
+
+  });
+</script>
 </body></html>
+

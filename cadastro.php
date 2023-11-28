@@ -9,7 +9,7 @@
         $cpf = $_POST["cpf"];
         $email = $_POST["email"];
         $senha = $_POST["senha"];
-        $senha_crip = md5($senha);
+        $senha_crip = md5(md5($senha));
 
         $pdo->query("INSERT INTO empresas SET  nome = '$nome', email = '$email', ativo = 'Sim', data_cad = curDate()");
         $id_empresa = $pdo->lastInsertId();

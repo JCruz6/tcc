@@ -15,7 +15,7 @@ if($total_reg > 0){
 	if(@count($res2) > 0){
 		$nome_sistema = $res2[0]['nome'];
 	}else{
-		$nome_sistema = 'SAS ';
+		$nome_sistema = 'MultiVendas Tecnologia de Software';
 	}
 
 	$query = $pdo->query("SELECT * FROM config WHERE empresa = 0");
