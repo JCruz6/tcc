@@ -42,6 +42,7 @@
 <link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
 <link rel="canonical" href="https://codepen.io/dpinnick/pen/LjdLmo?limit=all&page=21&q=service" />
 <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="css/login.css">
 <title>Sistema SaaS</title>
 
@@ -123,13 +124,12 @@
                 <!-- RECOVERY -->
                 <div class="recovery">
                     <h2>Recuperar Senha</h2>
-                    <p>Digite o <strong>endereço de email</strong> or <strong>nomde de usuário</strong> da conta e <strong>clique em enviar</strong></p>
-                    <p>Enviaremos por e-mail instruções sobre como redefinir sua senha..</p>
-                    <form class="recovery-form" action="recuperar-senha.php" method="post">
-                        <input type="text" class="input" id="user_recover" placeholder="Insira email ou nome de usuário aqui">
+                    <p>Digite o <strong>endereço de email</strong> da conta e <strong>clique em enviar</strong></p>
+                    <form class="recovery-form" id="form-recuperar" action="/PHPMailer/mail.php" method="post">
+                        <input type="email" class="input" name="email" id="email-recuperar" placeholder="Insira email aqui">
                         <input type="submit" class="button" value="Enviar">
                     </form>
-                    <p class="mssg">Um e-mail foi enviado para você com mais instruções.</p>
+                    <p class="mssg" id="mensagem-recuperar"></p>
                 </div>
 
                 <!-- SLIDER -->
@@ -209,6 +209,7 @@
 <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script >/* LOGIN - MAIN.JS - dp 2017 */
+
 
 
 // LOGIN TABS
@@ -309,9 +310,10 @@ $(function() {
 });
 //# sourceURL=pen.js
 </script>
-</body></html>
 
-<script type="text/javascript"> //Recuperar Senha
+
+
+<script type="text/javascript">
   $("#form-recuperar").submit(function () {
 
     event.preventDefault();
@@ -337,6 +339,7 @@ $(function() {
           $('#mensagem-recuperar').text(mensagem)
         }
 
+
       },
 
       cache: false,
@@ -347,4 +350,5 @@ $(function() {
 
   });
 </script>
-
+</body>
+</html>

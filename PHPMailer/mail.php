@@ -5,8 +5,6 @@
     require_once("SMTP.php");
     require_once("config-email.php");
 
-    $email = $_POST['email'];
-
     $query = $pdo->query("SELECT * from usuarios where email = '$email'");
     $res = $query->fetchAll(PDO::FETCH_ASSOC);
     $total_reg = @count($res);
@@ -27,9 +25,11 @@
         $email_sistema = $res[0]['email_sistema'];
     }
 
+    // Criar uma instância do objeto PHPMailer
     $mail = new PHPMailer\PHPMailer();
-    $mail->isSMTP();
 
+    // Definir as configurações do e-mail
+    $mail->isSMTP();
     $mail->Port = "465";
     $mail->Host = "smtp.gmail.com";
     $mail->IsHTML(true);
@@ -38,27 +38,34 @@
     $mail->CharSet = "UTF-8";
 
     $mail->SMTPAuth = true;
-    $mail->Username = $email;
-    $mail->Password = $senha;
+    $mail->Username = $usuarioEmail;
+    $mail->Password = $senhaEmail;
 
     $mail->SingleTo = true;
 
     $mail->From = $usuarioEmail;
     $mail->FromName = "MultiVendas Tecnologia de Software";
-    $mail->addAddress($$email);
+    $mail->addAddress($email);
     $mail->Subject = "Recebimento de senha";
-    $mail->Body = "Olá $empresa,
+    // Definir o corpo do e-mail
+    $mensagem = '
+        Olá '.$empresa. ',
 
-                Recebemos uma solicitação para recuperar a senha da sua conta na MultiVendas Tecnologia de Software.
-                
-                Sua nova senha é: $senha 
-                
-                Se você não solicitou a recuperação da senha, ignore este e-mail.
-                
-                Atenciosamente,
-                
-                Equipe MultiVendas Tecnologia de Software";
+        Recebemos uma solicitação para redefinir a senha da sua conta na Exemplo de empresa.
+
+        Sua nova senha é:
+
+        [nova senha]
+
+        Por favor, altere esta senha assim que possível para garantir a segurança da sua conta.
+
+        Atenciosamente,
+
+        Equipe Exemplo de empresa';
+
+    $mail->Body = $mensagem;
 
     if(!$mail->send()){
         echo $mail->ErrorInfo;
     }
+?>
