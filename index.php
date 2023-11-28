@@ -60,39 +60,64 @@
                 </div>
                 <!-- TERMS -->
                 <div class="terms">
-                    <h2>Termos de Serviço</h2>
-                    <p class="small">Last modified: September 23, 2017</p>
-                    <h3>Welcome to dp</h3>
-                    <p>By using our Services, you are agreeing to these terms. Please read them carefully.</p>
-                    <p>Our Services are very diverse, so sometimes additional terms or product requirements (including age requirements) may apply. Additional terms will be available with the relevant Services, and those additional terms become part of your agreement with us if you use those Services.</p>
-                    <h3>Using our Services</h3>
-                    <p>You must follow any policies made available to you within the Services.</p>
-                    <p>Using our Services does not give you ownership of any intellectual property rights in our Services or the content you access. You may not use content from our Services unless you obtain permission from its owner or are otherwise permitted by law. These terms do not grant you the right to use any branding or logos used in our Services. Don’t remove, obscure, or alter any legal notices displayed in or along with our Services.</p>
-                    <p>In connection with your use of the Services, we may send you service announcements, administrative messages, and other information. You may opt out of some of those communications.</p>
-                    <h3>Your dp Account</h3>
-                    <p>You may need a dp Account in order to use some of our Services. You may create your own dp Account, or your dp Account may be assigned to you by an administrator, such as your employer or educational institution. If you are using a dp Account assigned to you by an administrator, different or additional terms may apply and your administrator may be able to access or disable your account.</p>
-                    <p>To protect your dp Account, keep your password confidential. You are responsible for the activity that happens on or through your dp Account. Try not to reuse your dp Account password on third-party applications.</p>
-                    <h3>Privacy and Copyright Protection</h3>
-                    <p>dp’s privacy policies explain how we treat your personal data and protect your privacy when you use our Services. By using our Services, you agree that dp can use such data in accordance with our privacy policies.</p>
-                    <p>We respond to notices of alleged copyright infringement and terminate accounts of repeat infringers according to the process set out in the U.S. Digital Millennium Copyright Act.</p>
-                    <p>We provide information to help copyright holders manage their intellectual property online. If you think somebody is violating your copyrights and want to notify us, you can find information about submitting notices and dp’s policy about responding to notices in our Help Center.</p>
-                    <h3>Modifying and Terminating our Services</h3>
-                    <p>We are constantly changing and improving our Services. We may add or remove functionalities or features, and we may suspend or stop a Service altogether.</p>
-                    <p>You can stop using our Services at any time, although we’ll be sorry to see you go. dp may also stop providing Services to you, or add or create new limits to our Services at any time.</p>
-                    <p>We believe that you own your data and preserving your access to such data is important. If we discontinue a Service, where reasonably possible, we will give you reasonable advance notice and a chance to get information out of that Service.</p>
-                    <h3>Our Warranties and Disclaimers</h3>
-                    <p>We provide our Services using a commercially reasonable level of skill and care and we hope that you will enjoy using them. But there are certain things that we don’t promise about our Services.</p>
-                    <p>OTHER THAN AS EXPRESSLY SET OUT IN THESE TERMS OR ADDITIONAL TERMS, NEITHER dp NOR ITS SUPPLIERS OR DISTRIBUTORS MAKE ANY SPECIFIC PROMISES ABOUT THE SERVICES. FOR EXAMPLE, WE DON’T MAKE ANY COMMITMENTS ABOUT THE CONTENT WITHIN THE SERVICES, THE SPECIFIC FUNCTIONS OF THE SERVICES, OR THEIR RELIABILITY, AVAILABILITY, OR ABILITY TO MEET YOUR NEEDS. WE PROVIDE THE SERVICES “AS IS”.</p>
-                    <p>SOME JURISDICTIONS PROVIDE FOR CERTAIN WARRANTIES, LIKE THE IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. TO THE EXTENT PERMITTED BY LAW, WE EXCLUDE ALL WARRANTIES.</p>
-                    <h3>Liability for our Services</h3>
-                    <p>WHEN PERMITTED BY LAW, dp, AND dp’S SUPPLIERS AND DISTRIBUTORS, WILL NOT BE RESPONSIBLE FOR LOST PROFITS, REVENUES, OR DATA, FINANCIAL LOSSES OR INDIRECT, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES.</p>
-                    <p>TO THE EXTENT PERMITTED BY LAW, THE TOTAL LIABILITY OF dp’S, AND ITS SUPPLIERS AND DISTRIBUTORS, FOR ANY CLAIMS UNDER THESE TERMS, INCLUDING FOR ANY IMPLIED WARRANTIES, IS LIMITED TO THE AMOUNT YOU PAID US TO USE THE SERVICES (OR, IF WE CHOOSE, TO SUPPLYING YOU THE SERVICES AGAIN).</p>
-                    <p>IN ALL CASES, dp, AND ITS SUPPLIERS AND DISTRIBUTORS, WILL NOT BE LIABLE FOR ANY LOSS OR DAMAGE THAT IS NOT REASONABLY FORESEEABLE.</p>
-                    <h3>About these Terms</h3>
-                    <p>We may modify these terms or any additional terms that apply to a Service to, for example, reflect changes to the law or changes to our Services. You should look at the terms regularly. We’ll post notice of modifications to these terms on this page. We’ll post notice of modified additional terms in the applicable Service. Changes will not apply retroactively and will become effective no sooner than fourteen days after they are posted. However, changes addressing new functions for a Service or changes made for legal reasons will be effective immediately. If you do not agree to the modified terms for a Service, you should discontinue your use of that Service.</p>
-                    <p>If you do not comply with these terms, and we don’t take action right away, this doesn’t mean that we are giving up any rights that we may have (such as taking action in the future).</p>
-                    <p>The laws of California, U.S.A., excluding California’s conflict of laws rules, will apply to any disputes arising out of or relating to these terms or the Services. All claims arising out of or relating to these terms or the Services will be litigated exclusively in the federal or state courts of Santa Clara County, California, USA, and you and dp consent to personal jurisdiction in those courts.</p>
-                    <p>For information about how to contact dp, please visit our contact page.</p>
+                    <h2>Termos de Uso</h2>
+                    <p class="small">Última modoficação: 28 de Novembro, 2023</p>
+                    <h3>Bem-Vindo a MultiVendas</h3>
+                    <p>Ao utilizar nossos serviços, você concorda com estes termos. Por favor, leia-os com atenção.</p>
+                    <p>Nossos serviços são muito diversos, portanto, às vezes, termos adicionais ou requisitos de produto (incluindo requisitos de idade) podem ser aplicados. Termos adicionais estarão disponíveis com os Serviços relevantes, e esses termos adicionais tornar-se-ão parte do seu contrato conosco se você usar esses Serviços.</p>
+                    <h3>Termos e Condições</h3>
+                    <p>Estes termos e condições ("Termos", "Contrato") são um contrato entre a MultiVendas Tecnologia de Software. ("MultiVendas Tecnologia de Software, LTDA.", "Nos", "nós" ou "nosso") e você ("Usuário", "você" ou "seu"). </p>
+                    <p>Este Contrato estabelece os termos e condições gerais de uso do MultiVendas | Sistema de Gestão de estoque e venda e qualquer um de seus produtos ou serviços (coletivamente, "Aplicativo para celular ou computador" ou "Serviços").</p>
+                    <p>Em conexão com o seu uso dos Serviços, poderemos enviar-lhe anúncios de serviços, mensagens administrativas e outras informações. Você pode cancelar algumas dessas comunicações. Só entrar em contato com nosso suporte.</p>
+                    <h3>Contas e Associação</h3>
+                    <p>Se você decidir criar uma conta em nosso Sistema, assume a responsabilidade integral pela segurança da sua conta e por todas as atividades associadas a ela, bem como por qualquer ação relacionada.</p>
+                    <p>O fornecimento de informações de contato falsas, de qualquer natureza, pode resultar no encerramento da sua conta. É fundamental que nos informe imediatamente sobre qualquer uso não autorizado da sua conta ou qualquer violação de segurança.</p>
+                    <p>Ressaltamos que não seremos responsáveis por quaisquer ações ou omissões da sua parte, incluindo quaisquer danos resultantes de tais ações ou omissões. </p>
+                    <h3>Faturamento e Pagamentos</h3>
+                    <p>Você deve pagar todas as taxas ou encargos à sua conta de acordo com as taxas, encargos e termos de cobrança em vigor no momento em que uma taxa ou encargo é devido e pagável.</p>
+                    <p>Nos casos em que os Serviços são oferecidos em uma versão de avaliação gratuita, o pagamento pode ser solicitado após o término do período de avaliação gratuita, e não quando você insere seus detalhes de cobrança (que podem ser necessários antes do início do período de avaliação gratuita).</p>
+                    <p>Se a renovação automática estiver ativada para os Serviços pelos quais você se inscreveu, você será cobrado automaticamente de acordo com o termo que você selecionou.</p>
+                    <p>A troca de dados confidenciais entre a página Web e seus Usuários ocorre através de um canal de comunicação seguro e é criptografada.</p>
+                    <p>Se, a nosso critério, sua compra constituir uma transação de alto risco, solicitaremos que você nos forneça uma cópia da sua identificação com foto emitida pelo governo e possivelmente uma cópia de um extrato bancário recente do cartão de crédito ou débito usado na compra.</p>
+                    <p>Reservamo-nos o direito de alterar produtos e preços de produtos a qualquer momento.</p>
+                    <p>Também nos reservamos o direito de recusar qualquer pedido que você fizer conosco.</p>
+                    <p>Podemos, a nosso exclusivo critério, limitar ou cancelar as quantidades compradas por pessoa, por família ou por pedido.</p>
+                    <p>Essas restrições podem incluir pedidos feitos por ou sob a mesma conta de cliente, o mesmo cartão de crédito e / ou pedidos que usam o mesmo endereço de cobrança e / ou entrega.</p>
+                    <p>Caso façamos uma alteração ou cancelemos um pedido, podemos tentar notificá-lo entrando em contato com o e-mail e / ou o endereço de cobrança / número de telefone fornecido no momento em que o pedido foi feito.</p>
+                    <h3>Precisão das informações</h3>
+                    <p>Ocasionalmente, pode haver informações no sistema que contenham erros tipográficos, imprecisões ou omissões que possam estar relacionadas a promoções e ofertas.</p>
+                    <p>Reservamo-nos o direito de corrigir quaisquer erros, imprecisões ou omissões e de alterar ou atualizar informações ou cancelar pedidos se alguma informação no Sistema ou em qualquer Serviço relacionado for imprecisa a qualquer momento, sem aviso prévio (inclusive após o envio do pedido).</p>
+                    <p>Não assumimos nenhuma obrigação de atualizar, alterar ou esclarecer informações no Sistema, incluindo, sem limitação, informações sobre preços, exceto conforme exigido por lei.</p>
+                    <p>Nenhuma data de atualização ou atualização especificada aplicada no Sistema deve ser tomada para indicar que todas as informações no Sistema ou em qualquer Serviço relacionado foram modificadas ou atualizadas.</p>
+                    <h3>Serviços terceirizados</h3>
+                    <p>Se você decidir ativar, acessar ou usar serviços de terceiros, saiba que seu acesso e uso de outros serviços são regidos apenas pelos termos e condições de tais outros serviços, e nós não apoiamos, não somos responsáveis por, e não se responsabiliza por nenhum aspecto de outros serviços, incluindo, sem limitação, seu conteúdo ou a maneira como eles lidam com dados (incluindo seus dados) ou qualquer interação entre você e o provedor de outros serviços.</p>
+                    <p>Você renuncia irrevogavelmente a qualquer reclamação contra a MultiVendas Tecnologia de Software em relação a outros serviços.</p>
+                    <p>MultiVendas Tecnologia de Software não se responsabiliza por qualquer dano ou perda causada ou supostamente causada por ou em conexão com a sua ativação, acesso ou uso de quaisquer outros serviços ou sua confiança nas práticas de privacidade, processos de segurança de dados ou outras políticas desses outros serviços.</p>
+                    <p>Pode ser necessário que você se registre ou faça login em outros serviços em seus respectivos aplicativos móveis. Ao ativar outros serviços, você está permitindo expressamente a MultiVendas Tecnologia de Software divulgar seus dados conforme necessário para facilitar o uso ou a habilitação de outro serviço.</p>
+                    <h3>Utilizações Proibidas</h3>
+                    <p>Além de outros termos estabelecidos no Contrato, você está proibido de usar o Sistema ou seu Conteúdo: (a) para qualquer finalidade ilegal; (b) solicitar a terceiros que realizem ou participem de atos ilegais; (c) violar quaisquer regulamentos, regras, leis ou ordenanças locais, internacionais, federais, provinciais ou estaduais; (d) infringir ou violar nossos direitos de propriedade intelectual ou direitos de propriedade intelectual de terceiros; (e) assediar, abusar, insultar, prejudicar, difamar, caluniar, depreciar, intimidar ou discriminar com base em gênero, orientação sexual, religião, etnia, raça, idade, nacionalidade ou deficiência; (f) enviar informações falsas ou enganosas; (g) carregar ou transmitir vírus ou qualquer outro tipo de código malicioso que possa ou possa ser usado de qualquer maneira que afete a funcionalidade ou operação do Serviço ou de qualquer aplicativo móvel relacionado, outros aplicativos móveis ou a Internet; (h) coletar ou rastrear as informações pessoais de terceiros; (i) enviar spam, phishing, pharm, pretexto, aranha, rastejar ou raspar; (j) para qualquer finalidade obscena ou imoral; ou (k) interferir ou contornar os recursos de segurança do Serviço ou qualquer aplicativo móvel relacionado, outros aplicativos móveis ou a Internet. </p>
+                    <p>Reservamo-nos o direito de encerrar o uso do Serviço ou qualquer aplicativo móvel relacionado por violar qualquer um dos usos proibidos. phish, pharm, pretexto, aranha, rastejar ou raspar; (j) para qualquer finalidade obscena ou imoral; ou (k) interferir ou contornar os recursos de segurança do Serviço ou qualquer aplicativo móvel relacionado, outros aplicativos móveis ou a Internet. </p>
+                    <p>Reservamo-nos o direito de encerrar o uso do Serviço ou qualquer aplicativo móvel relacionado por violar qualquer um dos usos proibidos. phish, pharm, pretexto, aranha, rastejar ou raspar; (j) para qualquer finalidade obscena ou imoral; ou (k) interferir ou contornar os recursos de segurança do Serviço ou qualquer aplicativo móvel relacionado, outros aplicativos móveis ou a Internet.</p>
+                    <p>Reservamo-nos o direito de encerrar o uso do Serviço ou qualquer aplicativo móvel relacionado por violar qualquer um dos usos proibidos.</p>
+                    <h3>Direito de Propriedade Intelectual</h3>
+                    <p>Este Contrato não transfere para você nenhuma propriedade intelectual de propriedade da MultiVendas Tecnologia de Software ou terceiros, e todos os direitos, títulos e interesses de e para tais propriedades permanecerão (como entre as partes) unicamente com a MultiVendas Tecnologia de Software.</p>
+                    <p>Todas as marcas comerciais, marcas de serviço, gráficos e logotipos usados em conexão com nossos Aplicativos ou Serviços Móveis são marcas comerciais ou marcas registradas da MultiVendas Tecnologia de Software ou MultiVendas Tecnologia de Software licenciadores.</p>
+                    <p>Outras marcas comerciais, marcas de serviço, gráficos e logotipos usadas em conexão com nosso Sistema podem ser marcas comerciais de outros terceiros. O uso de nosso Sistema não concede a você direito ou licença para reproduzir ou usar qualquer MultiVendas Tecnologia de Software ou marcas comerciais de terceiros.</p>
+                    <h3>Divisibilidade</h3>
+                    <p>Todos os direitos e restrições contidos neste Contrato podem ser exercidos e devem ser aplicáveis e vinculativos somente na medida em que não violem nenhuma lei aplicável e se destinem a ser limitados na extensão necessária para que não tornem este Contrato ilegal, inválido ou inexequível.</p>
+                    <p>Se qualquer disposição ou parte de qualquer disposição deste Contrato for considerada ilegal, inválida ou inexequível por um tribunal de jurisdição competente, é intenção das partes que as demais disposições ou partes dele constituam seu acordo com relação ao objeto deste e todas as demais disposições ou partes delas permanecerão em pleno vigor e efeito.</p>
+                    <h3>Alterações e alterações</h3>
+                    <p>Reservamo-nos o direito de modificar este Contrato ou suas políticas relacionadas ao Sistema ou Serviços a qualquer momento, a partir da publicação de uma versão atualizada deste Contrato no Sistema.</p>
+                    <p>Quando o fizermos, revisaremos a data atualizada na parte inferior desta página. O uso continuado do Sistema após essas alterações constituirá seu consentimento para tais alterações.</p>
+                    <h3>Aceitação Desses Termos</h3>
+                    <p>Você reconhece que leu este Contrato e concorda com todos os seus termos e condições. Ao usar o Sistema ou seus Serviços, você concorda em ficar vinculado por este Contrato.</p>
+                    <p>Se você não concordar com os termos deste Contrato, não está autorizado a usar ou acessar o Sistema e seus Serviços.</p>
+                    <h3>Contatando-nos</h3>
+                    <p>Se você tiver alguma dúvida sobre este Contrato, entre em contato conosco pelo e-mail: multivendastec@gmail.com ou WhatsApp de um de nossos membros: </p>
+                    <p>(24) 99884-6612 – Everton L. Medeiros </p>
+                    <p>(24) 99999-7401 – Gabriel H. M. G. Romera</p>
+                    <p>(24) 99220-9461 – Jonathan P. da Cruz </p>
+                    <p>(24) 99884-2664 – Matheus de A. Moreira</p>
                 </div>
 
                 <!-- RECOVERY -->
