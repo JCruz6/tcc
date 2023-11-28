@@ -195,7 +195,7 @@ require_once("verificar.php");
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<h1><a class="navbar-brand" href="index.php"><span class="fa fa-usd"></span> Sistema SaaS<span class="dashboard_text"><span id="nome_sistema_titulo"></span></span></a></h1>
+						<h1><a class="navbar-brand" href="index.php"><span class="fa fa-usd"></span> MultiVendas<span class="dashboard_text"><span id="nome_sistema_titulo"></span></span></a></h1>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="sidebar-menu">
@@ -213,13 +213,13 @@ require_once("verificar.php");
 								</a>
 								<ul class="treeview-menu">
 
-									<li class="<?php echo $clientes ?>"><a href="index.php?pagina=clientes"><i class="fa fa-angle-right"></i> Clientes</a></li>
+									<li class="<?php echo $clientes ?>"><a href="index.php?pagina=clientes"><i class="fa fa-angle-right"></i>Clientes</a></li>
 
-									<li class="<?php echo $usuarios ?>"><a href="index.php?pagina=usuarios"><i class="fa fa-angle-right"></i> Usuários</a></li>
+									<li class="<?php echo $usuarios ?>"><a href="index.php?pagina=usuarios"><i class="fa fa-angle-right"></i>Usuários</a></li>
 
-									<li class="<?php echo $funcionarios ?>"><a href="index.php?pagina=funcionarios"><i class="fa fa-angle-right"></i> Funcionários</a></li>
+									<li class="<?php echo $funcionarios ?>"><a href="index.php?pagina=funcionarios"><i class="fa fa-angle-right"></i>Funcionários</a></li>
 
-									<li class="<?php echo $fornecedores ?>"><a href="index.php?pagina=fornecedores"><i class="fa fa-angle-right"></i> Fornecedores</a></li>
+									<li class="<?php echo $fornecedores ?>"><a href="index.php?pagina=fornecedores"><i class="fa fa-angle-right"></i>Fornecedores</a></li>
 									
 									
 								</ul>

@@ -1,11 +1,8 @@
 <?php 
-@session_start();
-require_once("verificar.php");
-require_once("../conexao.php");
-
-
-$pag = 'acessos';
-
+	@session_start();
+	require_once("verificar.php");
+	require_once("../conexao.php");
+	$pag = 'acessos';
 ?>
 
 <div class="">      
@@ -15,11 +12,6 @@ $pag = 'acessos';
 <div class="bs-example widget-shadow" style="padding:15px" id="listar">
 	
 </div>
-
-
-
-
-
 
 <!-- Modal Inserir-->
 <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
