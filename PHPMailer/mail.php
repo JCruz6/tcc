@@ -4,7 +4,6 @@
     require_once("PHPMailer.php");
     require_once("SMTP.php");
     require_once("config-email.php");
-    require_once("../senha.php");
 
     $email = $_POST['email'];
 
@@ -46,7 +45,7 @@
 
     $mail->From = $usuarioEmail;
     $mail->FromName = "MultiVendas Tecnologia de Software";
-    $mail->addAddress($usuarioEmail);
+    $mail->addAddress($$email);
     $mail->Subject = "Recebimento de senha";
     $mail->Body = "Olá $empresa,
 

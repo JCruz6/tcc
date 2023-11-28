@@ -25,7 +25,18 @@ if($total_reg > 0){
 	//envio do email
 	$destinatario = $email;
     $assunto = $nome_sistema . ' - Recuperação de Senha';
-    $mensagem = 'Sua senha é ' .$senha;
+    $mensagem = 'Olá $empresa,
+
+	Recebemos uma solicitação para recuperar a senha da sua conta na MultiVendas Tecnologia de Software.
+	
+	Sua nova senha é: $senha 
+	
+	Se você não solicitou a recuperação da senha, ignore este e-mail.
+	
+	Atenciosamente,
+	
+	Equipe MultiVendas Tecnologia de Software';
+	
     $cabecalhos = "From: ".$email_sistema;
    
     mail($destinatario, $assunto, $mensagem, $cabecalhos);

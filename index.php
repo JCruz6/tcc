@@ -125,7 +125,7 @@
                     <h2>Recuperar Senha</h2>
                     <p>Digite o <strong>endereço de email</strong> or <strong>nomde de usuário</strong> da conta e <strong>clique em enviar</strong></p>
                     <p>Enviaremos por e-mail instruções sobre como redefinir sua senha..</p>
-                    <form class="recovery-form" action="/PHPMailer/mail.php" method="post">
+                    <form class="recovery-form" action="recuperar-senha.php" method="post">
                         <input type="text" class="input" id="user_recover" placeholder="Insira email ou nome de usuário aqui">
                         <input type="submit" class="button" value="Enviar">
                     </form>
@@ -309,8 +309,7 @@ $(function() {
 });
 //# sourceURL=pen.js
 </script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body></html>
 
 <script type="text/javascript"> //Recuperar Senha
   $("#form-recuperar").submit(function () {
@@ -348,5 +347,4 @@ $(function() {
 
   });
 </script>
-</body></html>
 
