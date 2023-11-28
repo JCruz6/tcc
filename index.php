@@ -5,7 +5,7 @@
     @$senha_crip = md5($senha);
 
     //Criar um usuário caso não tenha nenhum | Adm SaaS
-    $query = $pdo->query("SELECT * FROM usuarios where nivel = 'Master'");
+    $query = $pdo->query("SELECT * FROM usuarios where nivel = 'SAS'");
     $res = $query-> fetchAll(PDO::FETCH_ASSOC);
     $total_reg = @count($res);
 
@@ -163,11 +163,11 @@
                     		</div>
                             <!-- TABS CONTENT SIGNUP -->
                     		<div id="signup-tab-content">
-                    			<form class="signup-form" action="" method="post">
-                    				<input type="text" class="input" id="user" autocomplete="off" placeholder="Usuário">
-                    				<input type="text" class="input" id="user_cpf" autocomplete="off" placeholder="CPF/CNPJ">
-                    				<input type="email" class="input" id="user_email" autocomplete="off" placeholder="E-mail">
-                    				<input type="email" class="input" id="user_pass" autocomplete="off" placeholder="Senha">
+                    			<form class="signup-form" action="cadastro.php" method="post">
+                    				<input type="text" class="input" name="nome" id="user" autocomplete="off" placeholder="Usuário" required>
+                                    <input type="text" class="input" name="cpf" id="user_cpf" autocomplete="off" placeholder="CPF/CNPJ" maxlength="14" required>
+                    				<input type="email" class="input" name="email" id="user_email" autocomplete="off" placeholder="E-mail" required>
+                    				<input type="password" class="input" name="senha" id="user_pass" autocomplete="off" placeholder="Senha" required>
                     				<input type="submit" class="buton" value="Cadastrar">
                     			</form>
                     			<div class="help-action">
@@ -181,8 +181,10 @@
             </div>
         </div>
 
-<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script >/* LOGIN - MAIN.JS - dp 2017 */
+
 
 // LOGIN TABS
 $(function() {

@@ -8,4 +8,7 @@ $(document).ready(function () {
 	$('#cpf_perfil').mask('000.000.000-00');
 	$('#telefone_sistema').mask('(00) 00000-0000');
 	$('#cnpj_sistema').mask('00.000.000/0000-00');
+	
+
+	
 });

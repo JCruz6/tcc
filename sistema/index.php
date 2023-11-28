@@ -108,11 +108,12 @@ $data_final_mes = $ano_atual."-".$mes_atual."-".$dia_final_mes;
 	<script src="js/pie-chart.js" type="text/javascript"></script>
 	<script type="text/javascript">
 
+		
 		$(document).ready(function () {
 
 			carregarDados();
 			carregarDadosConfig();
-
+			
 			$('#conteudo-principal').css('display', 'block');
 
 			$('#demo-pie-1').pieChart({
@@ -195,7 +196,7 @@ require_once("verificar.php");
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<h1><a class="navbar-brand" href="index.php"><span class="fa fa-usd"></span> MultiVendas<span class="dashboard_text"><span id="nome_sistema_titulo"></span></span></a></h1>
+						<h1><a class="navbar-brand" href="index.php"><span class="fa fa-usd"></span>MultiVendas<span class="dashboard_text"><span id="nome_sistema_titulo"></span></span></a></h1>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="sidebar-menu">
