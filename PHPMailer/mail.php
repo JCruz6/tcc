@@ -4,6 +4,7 @@
     require_once("PHPMailer.php");
     require_once("SMTP.php");
     require_once("config-email.php");
+    require_once("../senha.php");
 
     $query = $pdo->query("SELECT * from usuarios where email = '$email'");
     $res = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -53,9 +54,9 @@
 
         Recebemos uma solicitação para redefinir a senha da sua conta na Exemplo de empresa.
 
-        Sua nova senha é:
+        Sua nova senha é: '
 
-        [nova senha]
+        .$ss. '
 
         Por favor, altere esta senha assim que possível para garantir a segurança da sua conta.
 

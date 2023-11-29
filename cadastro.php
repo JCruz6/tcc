@@ -4,7 +4,7 @@
 
     $id_empresa = @$_SESSION['id_empresa'];
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
+     
         $nome = $_POST["nome"];
         $cpf = $_POST["cpf"];
         $email = $_POST["email"];
@@ -19,6 +19,5 @@
                                                 senha_crip = '$senha_crip', ativo = 'Sim', foto = 'sem-foto.jpg', nivel = 'Administrador', data = curDate() ");
     
         
-        
-    } 
+    echo '<script>window.location="index.php"</script>';
 ?>
