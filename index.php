@@ -44,7 +44,7 @@
 <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="css/login.css">
-<title>Sistema SaaS</title>
+<title>MultiVendas</title>
 
 </head><body>
         <!-- LOGIN MODULE -->
@@ -125,11 +125,21 @@
                 <div class="recovery">
                     <h2>Recuperar Senha</h2>
                     <p>Digite o <strong>endereço de email</strong> da conta e <strong>clique em enviar</strong></p>
-                    <form class="recovery-form" id="form-recuperar" action="/PHPMailer/mail.php" method="post">
-                        <input type="email" class="input" name="email" id="email-recuperar" placeholder="Insira email aqui">
+                    <form class="recovery-form" action="recuperar-senha.php" method="post">
+                        <input type="email" class="input" name="email" id="email-recuperar" placeholder="Insira email aqui" required>
                         <input type="submit" class="button" value="Enviar">
+                        <input type="hidden" name="env" value="form">
                     </form>
-                    <p class="mssg" id="mensagem-recuperar"></p>
+                    <p class="mssg"></p>
+                    <?php
+                        // Incluir a função
+                        require_once "recuperar-senha.php";
+                        // Verificar se o formulário foi enviado
+                        if (isset($_POST["env"]) && $_POST["env"] == "form") {
+                            // Chamar a função passando o email do usuário como parâmetro
+                            recuperar_senha($_POST["email"]);
+                        }
+                    ?>
                 </div>
 
                 <!-- SLIDER -->

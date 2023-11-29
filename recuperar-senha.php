@@ -1,48 +1,45 @@
-<?php 
-	require_once("conexao.php");
+<?php
+function novaSenha() {
+	$tamanhoSenha = 10;
 
-	$email = $_POST['email'];
+	$caracteresPermitidos = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_!@#';
 
-	$query = $pdo->query("SELECT * from usuarios where email = '$email'");
-	$res = $query->fetchAll(PDO::FETCH_ASSOC);
-	$total_reg = @count($res);
-	if($total_reg > 0){
-		$senha = $res[0]['senha'];
-		$empresa = $res[0]['empresa'];
-
-		$query2 = $pdo->query("SELECT * from empresas where id = '$empresa'");
-		$res2 = $query2->fetchAll(PDO::FETCH_ASSOC);
-		if(@count($res2) > 0){
-			$nome_sistema = $res2[0]['nome'];
-		}else{
-			$nome_sistema = 'MultiVendas Tecnologia de Software';
-		}
-
-		$query = $pdo->query("SELECT * FROM config WHERE empresa = 0");
-		$res = $query->fetchAll(PDO::FETCH_ASSOC);
-		$email_sistema = $res[0]['email_sistema'];
-
-		//envio do email
-		$destinatario = $email;
-		$assunto = $nome_sistema . ' - Recuperação de Senha';
-		$mensagem = 'Olá '.$empresa .
-
-		'Recebemos uma solicitação para recuperar a senha da sua conta na MultiVendas Tecnologia de Software.
-		
-		Sua nova senha é:' .$senha .
-		
-		'Se você não solicitou a recuperação da senha, ignore este e-mail.
-		
-		Atenciosamente,
-		
-		Equipe MultiVendas Tecnologia de Software';
-		
-		$cabecalhos = "From: ".$email_sistema;
-	
-		mail($destinatario, $assunto, $mensagem, $cabecalhos);
-
-		echo 'Recuperado com Sucesso';
-	}else{
-		echo 'Esse email não está Cadastrado!';
+	$ss = '';
+	for ($i = 0; $i < $tamanhoSenha; $i++) {
+		$ss .= $caracteresPermitidos[rand(0, strlen($caracteresPermitidos) - 1)];
 	}
-?>
+}
+function recuperar_senha($email)
+{
+	// Conectar ao banco de dados
+	$conexao = new PDO("mysql:host=localhost;dbname=tcc_saas", "root", "");
+
+	// Consultar o email no banco de dados
+	$query = $conexao->prepare("SELECT id, nome, email, senha FROM usuarios WHERE email = :email");
+	$query->bindParam(":email", $email);
+	$query->execute();
+
+	// Verificar se o email foi encontrado
+	$resultado = $query->fetch();
+	if ($resultado) {
+		// Gerar uma nova senha
+		$novasenha = novaSenha();
+
+		// Atualizar a senha no banco de dados
+		$query = $conexao->prepare("UPDATE usuarios SET senha = :senha WHERE id = :id");
+		$query->bindParam(":senha", $novasenha);
+		$query->bindParam(":id", $resultado["id"]);
+		$query->execute();
+
+		// Enviar o email para o usuário
+		$assunto = "Recuperação de senha";
+		$mensagem = "Olá, " . $resultado["nome"] . ".\n\nSua nova senha é: " . $novasenha . ".\n\nAtenciosamente,\nEquipe MultiVendas Tecnologia de Software.";
+		mail($email, $assunto, $mensagem);
+
+		// Exibir uma mensagem de sucesso
+		echo "<p class='mssg-sucesso'>Uma nova senha foi enviada para o seu email.</p>";
+	} else {
+		// Exibir uma mensagem de erro
+		echo "<p class='mssg-erro'>O email não foi encontrado.</p>";
+	}
+}

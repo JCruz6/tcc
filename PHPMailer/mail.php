@@ -6,6 +6,9 @@
     require_once("config-email.php");
     require_once("../senha.php");
 
+    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+    var_dump($dados);
+
     $query = $pdo->query("SELECT * from usuarios where email = '$email'");
     $res = $query->fetchAll(PDO::FETCH_ASSOC);
     $total_reg = @count($res);
