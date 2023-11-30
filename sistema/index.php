@@ -111,8 +111,9 @@ $data_final_mes = $ano_atual."-".$mes_atual."-".$dia_final_mes;
 		
 		$(document).ready(function () {
 
-			carregarDados();
 			carregarDadosConfig();
+			carregarDados();
+			
 			
 			$('#conteudo-principal').css('display', 'block');
 
@@ -1728,6 +1729,40 @@ require_once("verificar.php");
     }
 </script>
 
+<script type="text/javascript">
+	function carregarDadosConfig(){
+		var id_empresa = localStorage.id_empresa;
+		$('#id_empresa_config').val(id_empresa);
+
+		$.ajax({
+			url: "carregar-dados-config.php",
+			type: 'POST',
+			data: {id_empresa},
+
+			success: function (result) {
+				var split = result.split("-*");				
+				$('#titulo_empresa').text(split[0]);
+				$('#nome_sistema_titulo').text(split[0]);
+				$('#target-logo-rel').attr("src", "images/logos/" + split[4]);
+
+				$('#nome_sistema').val(split[0]);
+				$('#email_sistema').val(split[1]);
+				$('#telefone_sistema').val(split[2]);
+				$('#tipo_rel').val(split[3]).change();
+				$('#tipo_desconto').val(split[5]).change();
+				$('#comissao_config').val(split[6]);
+				$('#endereco_sistema').val(split[7]);
+				$('#cnpj_sistema').val(split[8]);
+				
+
+
+
+			},			
+
+		});		
+	}
+</script>
+
 
 
 <script type="text/javascript">
@@ -1770,39 +1805,7 @@ require_once("verificar.php");
 
 
 
-<script type="text/javascript">
-	function carregarDadosConfig(){
-		var id_empresa = localStorage.id_empresa;
-		$('#id_empresa_config').val(id_empresa);
 
-		$.ajax({
-			url: "carregar-dados-config.php",
-			type: 'POST',
-			data: {id_empresa},
-
-			success: function (result) {
-				var split = result.split("-*");				
-				$('#titulo_empresa').text(split[0]);
-				$('#nome_sistema_titulo').text(split[0]);
-				$('#target-logo-rel').attr("src", "images/logos/" + split[4]);
-
-				$('#nome_sistema').val(split[0]);
-				$('#email_sistema').val(split[1]);
-				$('#telefone_sistema').val(split[2]);
-				$('#tipo_rel').val(split[3]).change();
-				$('#tipo_desconto').val(split[5]).change();
-				$('#comissao_config').val(split[6]);
-				$('#endereco_sistema').val(split[7]);
-				$('#cnpj_sistema').val(split[8]);
-				
-
-
-
-			},			
-
-		});		
-	}
-</script>
 
 
 

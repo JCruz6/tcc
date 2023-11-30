@@ -54,11 +54,9 @@ if($email != ""){
 
 
 if($id == ""){
-	$query = $pdo->prepare("INSERT into $tabela SET nome = :nome, email = :email, telefone = :telefone, cpf = :cpf, cnpj = :cnpj, ativo = 'Sim', data_cad = curDate(), data_pgto = '$data_pgto', valor = :valor, endereco = :endereco "); 	
-
+	$query = $pdo->prepare("INSERT into $tabela SET nome = :nome, email = :email, telefone = :telefone, cpf = :cpf, cnpj = :cnpj, ativo = 'Sim', data_cad = curDate(), data_pgto = '$data_pgto', valor = :valor, endereco = :endereco "); 
 }else{
 	$query = $pdo->prepare("UPDATE $tabela SET nome = :nome, email = :email, telefone = :telefone, cpf = :cpf, cnpj = :cnpj, ativo = 'Sim', data_cad = curDate(), data_pgto = '$data_pgto', valor = :valor, endereco = :endereco WHERE id = '$id' ");
-	
 }
 
 $query->bindValue(":nome", "$nome");
@@ -71,7 +69,9 @@ $query->bindValue(":valor", "$valor");
 $query->execute();
 $id_empresa = $pdo->lastInsertId();
 
-
+if($id == ""){
+	$pdo->query("INSERT into config SET empresa = '$id_empresa', nome_sistema = '$nome', tipo_rel = 'PDF', foto_rel = 'logo-rel.jpg', tipo_desconto = '%', comissao = '0' ");
+}
 
 if($id == ""){
 	$query = $pdo->prepare("INSERT into usuarios SET empresa = '$id_empresa', nome = :nome, cpf = :cpf, email = :email, telefone = :telefone, endereco = :endereco, senha = '$senha', senha_crip = '$senha_crip', ativo = 'Sim', foto = 'sem-foto.jpg', nivel = 'Administrador', data = curDate() ");
@@ -83,6 +83,8 @@ $query->bindValue(":cpf", "$cpf");
 $query->bindValue(":endereco", "$endereco");
 $query->execute();
 }
+
+
 
 echo 'Salvo com Sucesso';
  ?>

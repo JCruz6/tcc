@@ -1,7 +1,7 @@
 <?php 
 $pag = 'usuarios';
  ?>
-<!-- <a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Novo Usuário</a> -->
+<a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Novo Usuário</a>
 <div class="bs-example widget-shadow" style="padding:15px" id="listar">
 
 </div>
@@ -33,11 +33,11 @@ $pag = 'usuarios';
 
 
 					<div class="row">
-						<div class="col-md-4">							
-								<label>Senha</label>
-								<input type="text" class="form-control" id="senha" name="senha" placeholder="Senha" >							
+						<div class="col-md-4" style="margin-bottom: 5px">
+							<label>Nível</label>
+							<input type="text" class="form-control" id="nivel" name="nivel" placeholder="Nível Acesso" >
 						</div>
-
+					
 						<div class="col-md-4">							
 								<label>Telefone</label>
 								<input type="text" class="form-control" id="telefone" name="telefone" placeholder="Seu Telefone" >							
@@ -57,13 +57,8 @@ $pag = 'usuarios';
 						
 					</div>
 
-
-					
-
-
 					<input type="hidden" name="id" id="id">
 				
-
 				<br>
 				<small><div id="mensagem" align="center"></div></small>
 			</div>

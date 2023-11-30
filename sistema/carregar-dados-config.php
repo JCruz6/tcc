@@ -41,10 +41,6 @@ $query = $pdo->query("SELECT * FROM cargos where nome = 'Gerente' and empresa = 
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $total_reg = @count($res);
 
-if($total_reg == 0){
-  $pdo->query("INSERT into cargos SET empresa = '$id_empresa', nome = 'Gerente'");
-}
-
 
 //Criar um cargo gerente caso não exista nenhum cargo vendedor
 $query = $pdo->query("SELECT * FROM cargos where nome = 'Vendedor' and empresa = '$id_empresa'");
