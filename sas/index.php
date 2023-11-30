@@ -200,8 +200,6 @@ require_once("verificar.php");
 								<ul class="treeview-menu">
 									<li><a href="index.php?pagina=usuarios"><i class="fa fa-angle-right"></i>Usuários</a></li>
 
-									<li><a href="index.php?pagina=empresas"><i class="fa fa-angle-right"></i>Empresas</a></li>
-									
 								</ul>
 							</li>
 
@@ -213,6 +211,8 @@ require_once("verificar.php");
 									<i class="fa fa-angle-left pull-right"></i>
 								</a>
 								<ul class="treeview-menu">
+									<li><a href="index.php?pagina=empresas"><i class="fa fa-angle-right"></i>Empresas</a></li>
+
 									<li><a href="index.php?pagina=frequencias"><i class="fa fa-angle-right"></i>Frequências</a></li>
 
 									<li><a href="index.php?pagina=grupos"><i class="fa fa-angle-right"></i>Grupos</a></li>

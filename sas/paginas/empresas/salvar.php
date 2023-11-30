@@ -1,6 +1,8 @@
 <?php 
 $tabela = 'empresas';
 require_once("../../../conexao.php");
+require_once("../../../senha.php");
+
 $nome = $_POST['nome'];
 $telefone = $_POST['telefone'];
 $email = $_POST['email'];
@@ -12,7 +14,7 @@ $valor = str_replace(',', '.', $valor);
 $data_pgto = $_POST['data_pgto'];
 $id = $_POST['id'];
 
-$senha = '123';
+$senha = $senhanova;
 $senha_crip = md5($senha);
 
 if($email == "" and $cpf == ""){
@@ -26,6 +28,26 @@ if($cnpj != ""){
 	$res = $query->fetchAll(PDO::FETCH_ASSOC);
 	if(@count($res) > 0 and $id != $res[0]['id']){
 		echo 'CNPJ já Cadastrado, escolha outro!!';
+		exit();
+	}
+}
+
+//validar cpf
+if($cpf != ""){
+	$query = $pdo->query("SELECT * from usuarios where cpf = '$cpf'");
+	$res = $query->fetchAll(PDO::FETCH_ASSOC);
+	if(@count($res) > 0 and $id != $res[0]['id']){
+		echo 'CPF já Cadastrado, escolha outro!!';
+		exit();
+	}
+}
+
+//validar email
+if($email != ""){
+	$query = $pdo->query("SELECT * from usuarios where email = '$email'");
+	$res = $query->fetchAll(PDO::FETCH_ASSOC);
+	if(@count($res) > 0 and $id != $res[0]['id']){
+		echo 'Email já Cadastrado, escolha outro!!';
 		exit();
 	}
 }
@@ -61,8 +83,6 @@ $query->bindValue(":cpf", "$cpf");
 $query->bindValue(":endereco", "$endereco");
 $query->execute();
 }
-
-
 
 echo 'Salvo com Sucesso';
  ?>

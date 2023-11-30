@@ -7,8 +7,9 @@ $email = $_POST['email'];
 $cpf = $_POST['cpf'];
 $endereco = $_POST['endereco'];
 $id = $_POST['id'];
+$senha = $_POST['senha'];
+$nivel = $_POST['nivel'];
 
-$senha = '123';
 $senha_crip = md5($senha);
 
 if($email == "" and $cpf == ""){
@@ -28,7 +29,7 @@ if($cpf != ""){
 
 
 if($id == ""){
-	$query = $pdo->prepare("INSERT into $tabela SET empresa = '0', nome = :nome, email = :email, telefone = :telefone, cpf = :cpf, ativo = 'Sim', data = curDate(), endereco = :endereco, nivel = 'SAS', foto = 'sem-foto.jpg', senha = '123', senha_crip = '$senha_crip' "); 	
+	$query = $pdo->prepare("INSERT into $tabela SET  nome = :nome, email = :email, telefone = :telefone, cpf = :cpf, ativo = 'Sim', data = curDate(), endereco = :endereco, nivel = 'SAS', foto = 'sem-foto.jpg', senha = '$senha', senha_crip = '$senha_crip' "); 	
 
 }else{
 	$query = $pdo->prepare("UPDATE $tabela SET nome = :nome, email = :email, telefone = :telefone, cpf = :cpf, ativo = 'Sim', endereco = :endereco WHERE id = '$id' ");

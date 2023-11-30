@@ -1,15 +1,16 @@
 <?php 
 $pag = 'empresas';
  ?>
+<head>
 
- <a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Nova Empresa</a>
+</head>
+<body>
+<a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Nova Empresa</a>
 
 
 <div class="bs-example widget-shadow" style="padding:15px" id="listar">
 	
 </div>
-
-
 
 <!-- Modal Inserir/Editar -->
 <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -39,17 +40,16 @@ $pag = 'empresas';
 
 
 					<div class="row">
-						<div class="col-md-6">							
+						<div class="col-md-4">							
 								<label>Telefone</label>
 								<input type="text" class="form-control" id="telefone" name="telefone" placeholder="Seu Telefone" >							
 						</div>
 
-						<div class="col-md-6">							
+						<div class="col-md-4">							
 								<label>CPF</label>
 								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Seu CPF">							
 						</div>
 					</div>
-
 
 					<div class="row">
 						<div class="col-md-4">							
@@ -66,13 +66,7 @@ $pag = 'empresas';
 								<label>Data PGTO</label>
 								<input type="date" class="form-control" id="data_pgto" name="data_pgto" >							
 						</div>
-
-						
 					</div>
-
-
-
-				
 
 					<div class="row">
 						<div class="col-md-12">							
@@ -82,13 +76,8 @@ $pag = 'empresas';
 						
 					</div>
 
-
-					
-
-
 					<input type="hidden" name="id" id="id">
 				
-
 				<br>
 				<small><div id="mensagem" align="center"></div></small>
 			</div>
@@ -99,11 +88,6 @@ $pag = 'empresas';
 		</div>
 	</div>
 </div>
-
-
-
-
-
 
 <!-- Modal Dados -->
 <div class="modal fade" id="modalDados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -157,17 +141,9 @@ $pag = 'empresas';
 					
 			</div>	
 
-			
-
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
 
 <!-- Modal Arquivos -->
 <div class="modal fade" id="modalArquivos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -596,5 +572,4 @@ function listarTextoContrato(id){
 
 </script>
 
-
-
+</body>

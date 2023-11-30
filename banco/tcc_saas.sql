@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Out-2022 às 03:49
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.1
+-- Tempo de geração: 29-Nov-2023 às 16:32
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `sas`
+-- Banco de dados: `tcc_saas`
 --
 
 -- --------------------------------------------------------
@@ -164,7 +164,13 @@ INSERT INTO `caixa` (`id`, `empresa`, `data_ab`, `hora_ab`, `valor_ab`, `gerente
 (18, 3, '2022-10-04', '21:17:14', '100.00', 5, NULL, NULL, NULL, NULL, NULL, NULL, 6, 5, 'Aberto', NULL),
 (19, 3, '2022-10-05', '16:06:46', '150.00', 5, NULL, NULL, NULL, NULL, NULL, NULL, 7, 21, 'Aberto', NULL),
 (20, 4, '2022-10-05', '19:38:53', '100.00', 20, '2022-10-05', '19:39:57', '231.00', '131.67', '-0.67', 6, 2, 19, 'Fechado', '0.00'),
-(21, 4, '2022-10-05', '19:40:58', '120.00', 6, '2022-10-05', '19:47:27', '356.67', '236.67', '0.00', 6, 2, 19, 'Fechado', '0.00');
+(21, 4, '2022-10-05', '19:40:58', '120.00', 6, '2022-10-05', '19:47:27', '356.67', '236.67', '0.00', 6, 2, 19, 'Fechado', '0.00'),
+(24, 7, '2023-11-28', '14:56:30', '200.00', 13, '2023-11-28', '14:56:39', '600.00', '0.00', '400.00', 13, 12, 13, 'Fechado', '0.00'),
+(25, 7, '2023-11-28', '14:57:08', '300.00', 13, '2023-11-28', '14:57:17', '2500.00', '0.00', '2200.00', 13, 13, 13, 'Fechado', '0.00'),
+(26, 7, '2023-11-28', '14:58:28', '90.00', 13, '2023-11-28', '15:04:38', '490.00', '400.00', '0.00', 13, 13, 13, 'Fechado', '0.00'),
+(27, 7, '2023-11-28', '15:07:06', '90.00', 13, '2023-11-28', '15:07:19', '90.00', '0.00', '0.00', 13, 12, 13, 'Fechado', '0.00'),
+(28, 7, '2023-11-28', '15:07:53', '90.00', 13, '2023-11-28', '16:12:48', '90.00', '0.00', '0.00', 13, 13, 13, 'Fechado', '0.00'),
+(29, 7, '2023-11-28', '16:15:37', '90.00', 13, '2023-11-28', '16:17:26', '2268.00', '2178.00', '0.00', 13, 12, 13, 'Fechado', '0.00');
 
 -- --------------------------------------------------------
 
@@ -185,12 +191,8 @@ CREATE TABLE `caixas` (
 --
 
 INSERT INTO `caixas` (`id`, `nome`, `empresa`, `status`, `usuario`) VALUES
-(1, 'Caixa A', 4, 'Aberto', 6),
-(2, 'Caixa B', 4, 'Fechado', 19),
-(4, 'Caixa C', 4, 'Fechado', 6),
-(5, 'Caixa D', 4, 'Fechado', 19),
-(6, 'Caixa 1', 3, 'Aberto', 5),
-(7, 'Caixa 2', 3, 'Aberto', 21);
+(12, 'Caixa 1', 7, 'Fechado', 13),
+(13, 'Caixa 2', 7, 'Fechado', 13);
 
 -- --------------------------------------------------------
 
@@ -220,7 +222,18 @@ INSERT INTO `cargos` (`id`, `empresa`, `nome`) VALUES
 (11, 4, 'Gerente'),
 (12, 9, 'Administrador'),
 (13, 9, 'Gerente'),
-(14, 9, 'Vendedor');
+(14, 9, 'Vendedor'),
+(18, 2, 'Administrador'),
+(19, 2, 'Gerente'),
+(20, 2, 'Vendedor'),
+(21, 0, 'Gerente'),
+(22, 0, 'Vendedor'),
+(23, 6, 'Administrador'),
+(24, 6, 'Gerente'),
+(25, 6, 'Vendedor'),
+(26, 7, 'Administrador'),
+(27, 7, 'Gerente'),
+(28, 7, 'Vendedor');
 
 -- --------------------------------------------------------
 
@@ -251,7 +264,8 @@ INSERT INTO `categorias` (`id`, `nome`, `ativo`, `empresa`) VALUES
 (10, 'Bermudas', 'Sim', 3),
 (11, 'Vestidos', 'Sim', 3),
 (12, 'Sapatos', 'Sim', 3),
-(13, 'Bonés e Chapéus', 'Sim', 3);
+(13, 'Bonés e Chapéus', 'Sim', 3),
+(14, 'Pods', 'Sim', 7);
 
 -- --------------------------------------------------------
 
@@ -318,7 +332,8 @@ INSERT INTO `clientes` (`id`, `empresa`, `nome`, `cpf`, `telefone`, `email`, `en
 (9, 4, 'Cliente Nulo', '011.111.111-11', NULL, NULL, NULL, '2022-10-03'),
 (10, 4, 'Cliente Novo', '999.999.999-99', NULL, NULL, NULL, '2022-10-03'),
 (11, 4, 'Cliente de Teste', '777.777.777-77', NULL, NULL, NULL, '2022-10-03'),
-(22, 3, 'Cliente 3', '555.555.555-55', '(55) 55555-5555', 'cliente3@hotmail.com', 'Rua C', '2022-10-04');
+(22, 3, 'Cliente 3', '555.555.555-55', '(55) 55555-5555', 'cliente3@hotmail.com', 'Rua C', '2022-10-04'),
+(24, 7, 'Gabriel Romera', '459.498.494-05', '(95) 04489-5949', 'gabriel.romera@aedb.br', '848484', '2023-11-28');
 
 -- --------------------------------------------------------
 
@@ -378,7 +393,9 @@ INSERT INTO `comissoes` (`id`, `empresa`, `descricao`, `valor`, `data_lanc`, `da
 (35, 3, 'Comissão: Vendedor', '3.50', '2022-10-05', NULL, 5, NULL, 105, 14, 'Não'),
 (36, 3, 'Comissão: Vendedor', '23.42', '2022-10-05', NULL, 21, NULL, 106, 14, 'Não'),
 (37, 4, 'Comissão: Vendedor', '0.00', '2022-10-05', NULL, 19, NULL, 107, 14, 'Não'),
-(38, 4, 'Comissão: Vendedor', '0.00', '2022-10-05', NULL, 19, NULL, 108, 14, 'Não');
+(38, 4, 'Comissão: Vendedor', '0.00', '2022-10-05', NULL, 19, NULL, 108, 14, 'Não'),
+(39, 7, 'Comissão: Jonathan Cruz', '0.00', '2023-11-28', NULL, 13, NULL, 109, 14, 'Não'),
+(40, 7, 'Comissão: Jonathan Cruz', '0.00', '2023-11-28', NULL, 13, NULL, 110, 14, 'Não');
 
 -- --------------------------------------------------------
 
@@ -407,10 +424,9 @@ CREATE TABLE `config` (
 --
 
 INSERT INTO `config` (`id`, `empresa`, `nome_sistema`, `telefone_sistema`, `email_sistema`, `tipo_rel`, `dias_bloqueio`, `msg_bloqueio`, `foto_rel`, `tipo_desconto`, `comissao`, `endereco_sistema`, `cnpj_sistema`) VALUES
-(1, 0, 'Sistema de Vendas', '(00) 00000-0000', 'contato@hugocursos.com.br', 'PDF', 3, 'Prezado Cliente, não identificamos o pagamento de sua última mensalidade, entre em contato conosco o mais rápido possivel para regularizar o pagamento, caso contário seu acesso ao sistema será desativado.', NULL, NULL, 0, NULL, NULL),
-(2, 3, 'Loja Freitas', '(48) 48574-5454', 'lojafreitas@hotmail.com', 'PDF', 0, NULL, '20-09-2022-18-52-04-logo.jpg', '%', 10, 'Rua X Número 150 - Bairro Centro Belo Horizonte - MG', '44.444.444/4444-44'),
-(3, 4, 'Empresa 2', '(45) 45454-5454', 'contato2@hugocursos.com.br', 'PDF', 0, NULL, '20-09-2022-11-00-08-20-09-2022-10-59-25-logo-rel.jpg', '%', 0, NULL, NULL),
-(4, 9, 'Sistema de Vendas', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL);
+(7, 0, 'MultiVendas', '(55) 55555-5555', 'multivendastec@gmail.com', 'PDF', 0, '', NULL, NULL, 0, NULL, NULL),
+(8, 6, 'Loja Cruz', '(00) 00000-0000', '', 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, 'Rua 2', ''),
+(9, 7, 'Sistema de Vendas', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -553,7 +569,10 @@ INSERT INTO `detalhes_grade` (`id`, `produto`, `id_ref`, `quantidade`, `cat_grad
 (118, 17, 198, 1, 20, 41, 0, 0, 'Venda', 3),
 (119, 14, 200, 3, 24, 57, 0, 0, 'Venda', 3),
 (120, 17, 201, 1, 20, 41, 0, 0, 'Venda', 4),
-(121, 17, 203, 1, 20, 41, 0, 0, 'Venda', 4);
+(121, 17, 203, 1, 20, 41, 0, 0, 'Venda', 4),
+(122, 20, 81, 100, 0, 0, 0, 0, 'Compra', 7),
+(123, 20, 82, 100, 0, 0, 0, 0, 'Compra', 7),
+(124, 20, 83, 100, 0, 0, 0, 0, 'Compra', 7);
 
 -- --------------------------------------------------------
 
@@ -580,9 +599,10 @@ CREATE TABLE `empresas` (
 --
 
 INSERT INTO `empresas` (`id`, `nome`, `telefone`, `email`, `cpf`, `cnpj`, `ativo`, `data_cad`, `data_pgto`, `valor`, `endereco`) VALUES
-(1, 'Empresa Teste', '(00)00000-0000', 'teste@hotmail.com', NULL, NULL, 'Sim', '2022-09-13', NULL, NULL, NULL),
-(3, 'Empresa 1', '(22) 22222-2222', 'empresa1@hotmail.com', '222.222.222-22', '22.222.222/2222-22', 'Sim', '2022-09-13', '2022-09-05', '250.00', 'Rua 6'),
-(4, 'Empresa 2', '(77) 77777-7777', 'empresa2@hotmail.com', '777.777.777-77', '77.777.777/7777-77', 'Sim', '2022-09-13', '2022-09-01', '250.00', 'Rua 6');
+(2, 'Empresa Teste', '(00) 00000-0000', 'teste@hotmail.com', NULL, NULL, 'Sim', '2023-11-27', NULL, NULL, NULL),
+(6, 'Jonathan', '', 'john.cruz@gmail.com', NULL, NULL, 'Sim', '2023-11-28', NULL, NULL, NULL),
+(7, 'Teste Recuperar', '', 'jpcruz381@gmail.com', NULL, NULL, 'Sim', '2023-11-28', NULL, NULL, NULL),
+(9, 'teste', '', 'teste.test@teste.com', NULL, NULL, 'Sim', '2023-11-29', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -666,7 +686,8 @@ INSERT INTO `forma_pgtos` (`id`, `empresa`, `nome`, `acrescimo`) VALUES
 (6, 3, 'Cartão de Crédito 2X', 2),
 (7, 3, 'Cartão de Crédito  4X', 4),
 (8, 3, 'Cartão de Crédito  6X', 6),
-(10, 4, 'Pix', 0);
+(10, 4, 'Pix', 0),
+(11, 7, 'Dinheiro', 0);
 
 -- --------------------------------------------------------
 
@@ -694,7 +715,8 @@ INSERT INTO `fornecedores` (`id`, `empresa`, `nome`, `cpf`, `telefone`, `email`,
 (1, 3, 'Fornecedor', '000.000.000-01', '(01) 11111-1111', 'fornecedor@hotmail.com', 'Rua C', '2022-09-20', 'Física'),
 (2, 3, 'Fornecedor 2', '65.555.555/5555-55', '(00) 00022-2222', 'fornecedor2@hotmail.com', 'Rua C', '2022-09-20', 'Jurídica'),
 (3, 4, 'Fornecedor 2', '111.111.111-11', '(11) 11111-1111', 'fornecedor3@hotmail.com', 'Rua A', '2022-09-26', 'Física'),
-(4, 4, 'Fornecedor 1', '111.111.111-12', '(11) 11111-1111', 'fornecedor1@hotmail.com', 'Rua C', '2022-09-26', 'Física');
+(4, 4, 'Fornecedor 1', '111.111.111-12', '(11) 11111-1111', 'fornecedor1@hotmail.com', 'Rua C', '2022-09-26', 'Física'),
+(5, 7, 'teste fornecedor', '74.077.044/8448-40', '(51) 51515-1525', 'testefornecedor@gmail.com', 'Rua Dois 362 - AL', '2023-11-28', 'Jurídica');
 
 -- --------------------------------------------------------
 
@@ -723,7 +745,13 @@ INSERT INTO `frequencias` (`id`, `empresa`, `frequencia`, `dias`) VALUES
 (7, 4, 'Nenhuma', 0),
 (8, 4, 'Mensal', 30),
 (9, 9, 'Nenhuma', 0),
-(10, 9, 'Mensal', 30);
+(10, 9, 'Mensal', 30),
+(13, 2, 'Nenhuma', 0),
+(14, 2, 'Mensal', 30),
+(15, 6, 'Nenhuma', 0),
+(16, 6, 'Mensal', 30),
+(17, 7, 'Nenhuma', 0),
+(18, 7, 'Mensal', 30);
 
 -- --------------------------------------------------------
 
@@ -949,7 +977,11 @@ INSERT INTO `itens_venda` (`id`, `empresa`, `produto`, `valor_unitario`, `quanti
 (201, 4, 17, '26.67', 1, 19, 107, '2022-10-05'),
 (202, 4, 18, '35.00', 3, 19, 107, '2022-10-05'),
 (203, 4, 17, '26.67', 1, 19, 108, '2022-10-05'),
-(204, 4, 18, '35.00', 6, 19, 108, '2022-10-05');
+(204, 4, 18, '35.00', 6, 19, 108, '2022-10-05'),
+(205, 7, 20, '25.00', 1, 13, 109, '2023-11-28'),
+(206, 7, 20, '25.00', 15, 13, 109, '2023-11-28'),
+(209, 7, 20, '18.00', 1, 13, 110, '2023-11-28'),
+(210, 7, 20, '18.00', 120, 13, 110, '2023-11-28');
 
 -- --------------------------------------------------------
 
@@ -1043,7 +1075,9 @@ INSERT INTO `pagar` (`id`, `empresa`, `tipo`, `descricao`, `pessoa`, `valor`, `d
 (76, 3, 'Comissão', 'Comissão Paga', 22, '3.50', '2022-10-05', '2022-10-05', '2022-10-05', 5, 5, 0, NULL, 'sem-foto.png', 'Sim', NULL),
 (77, 3, 'Comissão', 'Comissão Paga', 22, '9.67', '2022-10-05', '2022-10-05', '2022-10-05', 5, 5, 0, NULL, 'sem-foto.png', 'Sim', NULL),
 (79, 3, 'Comissão', 'Comissão Paga', 14, '3.50', '2022-10-05', '2022-10-05', '2022-10-05', 5, 5, 0, NULL, 'sem-foto.png', 'Sim', NULL),
-(80, 3, 'Comissão', 'Comissão Paga', 14, '3.50', '2022-10-05', '2022-10-05', '2022-10-05', 5, 5, 0, NULL, 'sem-foto.png', 'Sim', NULL);
+(80, 3, 'Comissão', 'Comissão Paga', 14, '3.50', '2022-10-05', '2022-10-05', '2022-10-05', 5, 5, 0, NULL, 'sem-foto.png', 'Sim', NULL),
+(82, 7, 'Compra', 'Compra Pod Amrelo 500g', 0, '20.00', '2023-11-28', '2023-11-28', '2023-11-28', 13, 13, 0, NULL, 'sem-foto.png', 'Sim', 20),
+(83, 7, 'Compra', 'Compra Pod Amrelo 500g', 0, '1000.00', '2023-11-28', '2023-11-28', '2023-11-28', 13, 13, 0, NULL, 'sem-foto.png', 'Sim', 20);
 
 -- --------------------------------------------------------
 
@@ -1086,7 +1120,8 @@ INSERT INTO `produtos` (`id`, `codigo`, `nome`, `descricao`, `estoque`, `valor_v
 (16, '02285429082', 'Bermuda', NULL, 60, '45.00', '30.00', '50.00', 1, 10, '03-10-2022-23-30-30-bermuda.jpg', '2022-10-03', 'Sim', 3, 5),
 (17, '7896548140284', 'Sapato Social', NULL, 9, '26.67', '13.33', '100.00', 0, 12, '03-10-2022-23-28-13-sapato.png', '2022-10-03', 'Sim', 3, 12),
 (18, '7892017809010', 'Boné', NULL, 127, '35.00', '13.33', '150.00', 2, 13, '03-10-2022-23-26-29-bone.png', '2022-10-03', 'Sim', 3, 6),
-(19, '0125', 'aaaa', NULL, 3, '33.33', '33.33', '0.00', 0, 10, 'sem-foto.jpg', '2022-10-04', 'Sim', 3, 5);
+(19, '0125', 'aaaa', NULL, 3, '33.33', '33.33', '0.00', 0, 10, 'sem-foto.jpg', '2022-10-04', 'Sim', 3, 5),
+(20, '9009599448', 'Pod Amrelo 500g', NULL, 63, '18.00', '5.00', '80.00', 0, 14, 'sem-foto.jpg', '2023-11-28', 'Sim', 7, 10);
 
 -- --------------------------------------------------------
 
@@ -1202,7 +1237,8 @@ INSERT INTO `receber` (`id`, `empresa`, `tipo`, `descricao`, `pessoa`, `valor`, 
 (105, 3, 'Venda', 'Venda', 0, '35.00', '2022-10-05', '2022-10-05', '2022-10-05', 5, 5, 0, 'Dinheiro', 'sem-foto.png', 'Sim', 18, '13:10:29', '35.00', '0.00', '0.00', 0, 14),
 (106, 3, 'Venda', 'Venda', 22, '234.17', '2022-10-05', '2022-10-05', '2022-10-05', 21, 21, 0, 'Cartão de Débito', 'sem-foto.png', 'Sim', 19, '16:07:22', '234.17', '0.00', '0.00', 0, 14),
 (107, 4, 'Venda', 'Venda', 8, '131.67', '2022-10-05', '2022-10-05', '2022-10-05', 19, 19, 0, 'Pix', 'sem-foto.png', 'Sim', 20, '19:39:33', '131.67', '0.00', '0.00', 0, 14),
-(108, 4, 'Venda', 'Venda', 11, '236.67', '2022-10-05', '2022-10-05', '2022-10-05', 19, 19, 0, 'Pix', 'sem-foto.png', 'Sim', 21, '19:47:06', '236.67', '0.00', '0.00', 0, 14);
+(108, 4, 'Venda', 'Venda', 11, '236.67', '2022-10-05', '2022-10-05', '2022-10-05', 19, 19, 0, 'Pix', 'sem-foto.png', 'Sim', 21, '19:47:06', '236.67', '0.00', '0.00', 0, 14),
+(110, 7, 'Venda', 'Venda', 0, '2178.00', '2023-11-28', '2023-11-28', '2023-11-28', 13, 13, 0, 'Dinheiro', 'sem-foto.png', 'Sim', 29, '16:16:31', '2178.00', '0.00', '0.00', 0, 14);
 
 -- --------------------------------------------------------
 
@@ -1236,7 +1272,8 @@ INSERT INTO `saidas` (`id`, `produto`, `quantidade`, `motivo`, `usuario`, `data`
 (11, 12, 3, 'Cancelamento da Compra', 6, '2022-09-27', 4),
 (12, 12, 3, 'Perda ou Furto', 6, '2022-09-27', 4),
 (13, 12, 5, 'Perda', 6, '2022-09-27', 4),
-(14, 13, 5, 'teste', 6, '2022-10-03', 4);
+(14, 13, 5, 'teste', 6, '2022-10-03', 4),
+(15, 20, 100, 'Cancelamento da Compra', 13, '2023-11-28', 7);
 
 -- --------------------------------------------------------
 
@@ -1320,18 +1357,13 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `empresa`, `nome`, `telefone`, `cpf`, `email`, `senha`, `senha_crip`, `endereco`, `ativo`, `foto`, `nivel`, `data`) VALUES
-(3, 0, 'Administrador SAS', '(44) 44444-5555', '000.000.000-00', 'contato@hugocursos.com.br', '123', '202cb962ac59075b964b07152d234b70', 'Rua 6', 'Sim', '13-09-2022-09-43-36-04-05-2022-14-26-43-eu.jpeg', 'SAS', '2022-09-12'),
-(5, 3, 'Empresa 1', '(22) 22222-2222', '222.222.222-22', 'empresa1@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', 'Rua 6', 'Sim', 'sem-foto.jpg', 'Administrador', '2022-09-13'),
-(6, 4, 'Hugo Admin', '(77) 77777-7777', '777.777.777-77', 'empresa2@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', 'Rua 6', 'Sim', 'sem-foto.jpg', 'Administrador', '2022-09-13'),
-(11, 0, 'Hugo Vasconcelos', '(55) 55555-5555', '555.555.555-55', 'hugovasconcelosf@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', 'Rua AAA', 'Sim', 'sem-foto.jpg', 'SAS', '2022-09-13'),
-(14, 3, 'Vendedor', '(12) 22222-2222', '222.222.222-25', 'vendedor@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', 'Rua C', 'Sim', 'sem-foto.jpg', 'Vendedor', '2022-09-20'),
-(18, 3, 'Gerente Teste', '(14) 44444-4444', '444.444.444-44', 'gerente@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', '', 'Sim', 'sem-foto.jpg', 'Gerente', '2022-09-20'),
-(19, 4, 'Operador Teste', '(44) 44444-7744', '444.444.447-77', 'operador1@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', 'Rua C', 'Sim', 'sem-foto.jpg', 'Operador', '2022-09-27'),
-(20, 4, 'Gerente Teste', '(11) 11111-1111', '111.111.111-11', 'gerenteteste@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', 'Rua C', 'Sim', 'sem-foto.jpg', 'Gerente', '2022-09-27'),
-(21, 3, 'Operador Caixa', '(11) 11111-1111', '111.111.111-12', 'operador2@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', '', 'Sim', 'sem-foto.jpg', 'Operador', '2022-10-03'),
-(22, 3, 'Paulo Vendedor', '(11) 11111-1117', '111.111.111-17', 'vendedor5@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', '', 'Sim', 'sem-foto.jpg', 'Vendedor', '2022-10-05'),
-(23, 3, 'Operador de Teste', '(11) 11111-2222', '222.222.221-22', 'operador3@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', '', 'Sim', 'sem-foto.jpg', 'Operador', '2022-10-05'),
-(27, 4, 'Nome do Vendedor', '(48) 44444-4444', '484.444.444-44', 'vendedor4@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', '', 'Sim', 'sem-foto.jpg', 'Vendedor', '2022-10-05');
+(1, 0, 'MultiVendas', '(55) 55555-5555', '000.000.000-00', 'multivendastec@gmail.com', '123', '202cb962ac59075b964b07152d234b70', '', 'Sim', 'sem-foto.jpg', 'SAS', NULL),
+(3, 2, 'Administrador', NULL, '111.111.111-11', 'teste@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', NULL, 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-27'),
+(12, 6, 'Jonathan Cruz', '', '12345678998', 'john.cruz@gmail.com', '123', '202cb962ac59075b964b07152d234b70', '', 'Sim', '28-11-2023-12-17-46-Jonathan.jpeg', 'Administrador', '2023-11-28'),
+(13, 7, 'Teste Recuperar', NULL, '12345678965', 'jpcruz381@gmail.com', '123', '202cb962ac59075b964b07152d234b70', NULL, 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-28'),
+(14, 7, 'Jonathan Cruz', '(55) 55555-5555', '484.074.848-48', 'jonathan.cruz@aedb.br', '123', '202cb962ac59075b964b07152d234b70', 'Rua Dois 362 - AL', 'Sim', 'sem-foto.jpg', 'Vendedor', '2023-11-28'),
+(15, 7, 'teste senha', '(68) 50488-4848', '484.084.848-04', 'testesenha@gmail.com', '1234', '81dc9bdb52d04dc20036dbd8313ed055', 'Rua Dois', 'Sim', 'sem-foto.jpg', 'Vendedor', '2023-11-28'),
+(17, 9, 'teste', NULL, '40848484840808', 'teste.test@teste.com', '123', 'd9b1d7db4cd6e70935368a1efb10e377', NULL, 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-29');
 
 -- --------------------------------------------------------
 
@@ -1356,9 +1388,6 @@ INSERT INTO `usuarios_permissoes` (`id`, `usuario`, `permissao`) VALUES
 (73, 21, 32),
 (74, 23, 32),
 (75, 23, 2),
-(78, 14, 2),
-(79, 14, 11),
-(80, 14, 33),
 (88, 20, 1),
 (89, 20, 2),
 (91, 20, 4),
@@ -1388,7 +1417,10 @@ INSERT INTO `usuarios_permissoes` (`id`, `usuario`, `permissao`) VALUES
 (119, 20, 32),
 (120, 20, 33),
 (121, 20, 34),
-(122, 19, 32);
+(122, 19, 32),
+(123, 14, 32),
+(124, 15, 2),
+(125, 15, 4);
 
 --
 -- Índices para tabelas despejadas
@@ -1582,25 +1614,25 @@ ALTER TABLE `arquivos`
 -- AUTO_INCREMENT de tabela `caixa`
 --
 ALTER TABLE `caixa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de tabela `caixas`
 --
 ALTER TABLE `caixas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de tabela `cargos`
 --
 ALTER TABLE `cargos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de tabela `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `cat_grade`
@@ -1612,19 +1644,19 @@ ALTER TABLE `cat_grade`
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de tabela `comissoes`
 --
 ALTER TABLE `comissoes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de tabela `config`
 --
 ALTER TABLE `config`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `contratos`
@@ -1636,13 +1668,13 @@ ALTER TABLE `contratos`
 -- AUTO_INCREMENT de tabela `detalhes_grade`
 --
 ALTER TABLE `detalhes_grade`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT de tabela `empresas`
 --
 ALTER TABLE `empresas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `entradas`
@@ -1654,19 +1686,19 @@ ALTER TABLE `entradas`
 -- AUTO_INCREMENT de tabela `forma_pgtos`
 --
 ALTER TABLE `forma_pgtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `fornecedores`
 --
 ALTER TABLE `fornecedores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `frequencias`
 --
 ALTER TABLE `frequencias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `grupo_acessos`
@@ -1684,31 +1716,31 @@ ALTER TABLE `itens_grade`
 -- AUTO_INCREMENT de tabela `itens_venda`
 --
 ALTER TABLE `itens_venda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
 
 --
 -- AUTO_INCREMENT de tabela `pagar`
 --
 ALTER TABLE `pagar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de tabela `receber`
 --
 ALTER TABLE `receber`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT de tabela `saidas`
 --
 ALTER TABLE `saidas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de tabela `sangrias`
@@ -1726,13 +1758,13 @@ ALTER TABLE `trocas`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios_permissoes`
 --
 ALTER TABLE `usuarios_permissoes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

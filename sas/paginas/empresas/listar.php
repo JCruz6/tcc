@@ -1,6 +1,7 @@
 <?php 
 $tabela = 'empresas';
 require_once("../../../conexao.php");
+require_once("../../../senha.php");
 
 $query = $pdo->query("SELECT * FROM $tabela order by id desc");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -115,9 +116,6 @@ HTML;
 }
 
  ?>
-
-
-
 
  <script type="text/javascript">
 	$(document).ready( function () {

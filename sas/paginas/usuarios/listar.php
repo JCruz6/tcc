@@ -46,10 +46,7 @@ if($ativo == 'Sim'){
 	$acao = 'Sim';
 	$classe_ativo = '#c4c4c4';
 }
-
-if($nivel == 'SAS'){
-	$senha = '********';
-}		
+		
 
 echo <<<HTML
 <tr style="color:{$classe_ativo}">

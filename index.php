@@ -131,15 +131,6 @@
                         <input type="hidden" name="env" value="form">
                     </form>
                     <p class="mssg"></p>
-                    <?php
-                        // Incluir a função
-                        require_once "recuperar-senha.php";
-                        // Verificar se o formulário foi enviado
-                        if (isset($_POST["env"]) && $_POST["env"] == "form") {
-                            // Chamar a função passando o email do usuário como parâmetro
-                            recuperar_senha($_POST["email"]);
-                        }
-                    ?>
                 </div>
 
                 <!-- SLIDER -->
@@ -179,26 +170,26 @@
                         <!-- TABS -->
                     	<div class="tabs">
                             <h3 class="login-tab"><a class="log-in active" href="#login-tab-content"><span>Entrar<span></a></h3>
-                    		<h3 class="signup-tab"><a class="sign-up" href="#signup-tab-content"><span>Cadastre-se</span></a></h3>
+                    	<!-- <h3 class="signup-tab"><a class="sign-up" href="#signup-tab-content"><span>Cadastre-se</span></a></h3> -->
                     	</div>
                         <!-- TABS CONTENT -->
                     	<div class="tabs-content">
                             <!-- TABS CONTENT LOGIN -->
                     		<div id="login-tab-content" class="active">
                     			<form class="login-form" action="autenticar.php" method="post">
-                    				<input type="text" class="input" name="usuario" id="user_login" placeholder="Email ou CPF">
-                    				<input type="password" class="input" name="senha" id="user_pass"  placeholder="Senha">
+                    				<input type="text" class="input" name="usuario"  id="user_login" placeholder="Email ou CPF">
+                    				<input type="password" class="input" name="senha"  id="user_pass"  placeholder="Senha">
                     				<!--<input type="checkbox" class="checkbox" checked id="remember_me"> -->
                     				<!-- <label for="remember_me">Remember me</label> -->
                     				<input type="submit" class="buton" value="Login">
                     			</form>
-                    			<div class="help-action">
+                    			<!-- <div class="help-action">
                     				<p><i class="fa fa-arrow-left" aria-hidden="true"></i><a class="forgot" href="#">Esqueceu sua senha?</a></p>
-                    			</div>
+                    			</div> -->
                     		</div>
                             <!-- TABS CONTENT SIGNUP -->
                     		<div id="signup-tab-content">
-                    			<form class="signup-form" action="cadastro.php" method="post">
+                    			<form class="signup-form" action="cadastro-copy.php" method="post">
                     				<input type="text" class="input" name="nome" id="user" autocomplete="off" placeholder="Usuário" required>
                                     <input type="text" class="input" name="cpf" id="user_cpf" autocomplete="off" placeholder="CPF/CNPJ" maxlength="14" required>
                     				<input type="email" class="input" name="email" id="user_email" autocomplete="off" placeholder="E-mail" required>
@@ -209,7 +200,7 @@
                     				<p>Ao se inscrever, você concorda com nossos</p>
                     				<p><i class="fa fa-arrow-left" aria-hidden="true"></i><a class="agree" href="#">Termos de serviço</a></p>
                     			</div>
-                    		</div>
+                    		</div> 
                     	</div>
                 	</div>
                 </div>
@@ -218,6 +209,8 @@
 
 <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script type="text/javascript">var pag = "<?=$pag?>"</script>
+<script src="js/ajax.js"></script>
 <script >/* LOGIN - MAIN.JS - dp 2017 */
 
 

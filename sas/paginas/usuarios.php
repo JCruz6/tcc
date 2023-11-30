@@ -1,15 +1,10 @@
 <?php 
 $pag = 'usuarios';
  ?>
-
- <a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Novo Usuário</a>
-
-
+<!-- <a class="btn btn-primary" onclick="inserir()" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Novo Usuário</a> -->
 <div class="bs-example widget-shadow" style="padding:15px" id="listar">
-	
+
 </div>
-
-
 
 <!-- Modal Inserir/Editar -->
 <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -24,7 +19,6 @@ $pag = 'usuarios';
 			<form id="form">
 			<div class="modal-body">
 				
-
 					<div class="row">
 						<div class="col-md-6">							
 								<label>Nome</label>
@@ -39,19 +33,21 @@ $pag = 'usuarios';
 
 
 					<div class="row">
-						<div class="col-md-6">							
+						<div class="col-md-4">							
+								<label>Senha</label>
+								<input type="text" class="form-control" id="senha" name="senha" placeholder="Senha" >							
+						</div>
+
+						<div class="col-md-4">							
 								<label>Telefone</label>
 								<input type="text" class="form-control" id="telefone" name="telefone" placeholder="Seu Telefone" >							
 						</div>
 
-						<div class="col-md-6">							
+						<div class="col-md-4">							
 								<label>CPF</label>
 								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Seu CPF">							
 						</div>
 					</div>
-
-
-							
 
 					<div class="row">
 						<div class="col-md-12">							
@@ -105,7 +101,7 @@ $pag = 'usuarios';
 						<span><b>CPF: </b></span><span id="cpf_dados"></span>
 					</div>
 
-					<div class="col-md-8" style="margin-bottom: 5px">
+					<div class="col-md-6" style="margin-bottom: 5px">
 						<span><b>Email: </b></span><span id="email_dados"></span>
 					</div>
 
