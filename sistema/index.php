@@ -598,8 +598,6 @@ require_once("verificar.php");
 	<script src="js/bootstrap.js"> </script>
 	<!-- //Bootstrap Core JavaScript -->
 
-
-
 	<!-- Mascaras JS -->
 <script type="text/javascript" src="js/mascaras.js"></script>
 
@@ -609,11 +607,6 @@ require_once("verificar.php");
 	
 </body>
 </html>
-
-
-
-
-
 
 <!-- Modal Perfil -->
 <div class="modal fade" id="modalPerfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -1754,16 +1747,11 @@ require_once("verificar.php");
 				$('#endereco_sistema').val(split[7]);
 				$('#cnpj_sistema').val(split[8]);
 				
-
-
-
 			},			
 
 		});		
 	}
 </script>
-
-
 
 <script type="text/javascript">
 	function carregarDados(){

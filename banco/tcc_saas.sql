@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Nov-2023 às 16:32
+-- Tempo de geração: 30-Nov-2023 às 23:19
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -233,7 +233,31 @@ INSERT INTO `cargos` (`id`, `empresa`, `nome`) VALUES
 (25, 6, 'Vendedor'),
 (26, 7, 'Administrador'),
 (27, 7, 'Gerente'),
-(28, 7, 'Vendedor');
+(28, 7, 'Vendedor'),
+(43, 50, 'Administrador'),
+(44, 50, 'Vendedor'),
+(45, 52, 'Administrador'),
+(46, 52, 'Vendedor'),
+(47, 53, 'Administrador'),
+(48, 53, 'Vendedor'),
+(49, 54, 'Administrador'),
+(50, 54, 'Vendedor'),
+(51, 55, 'Administrador'),
+(52, 55, 'Vendedor'),
+(53, 44, 'Administrador'),
+(54, 44, 'Vendedor'),
+(55, 45, 'Administrador'),
+(56, 45, 'Vendedor'),
+(57, 46, 'Administrador'),
+(58, 46, 'Vendedor'),
+(59, 47, 'Administrador'),
+(60, 47, 'Vendedor'),
+(61, 48, 'Administrador'),
+(62, 48, 'Vendedor'),
+(63, 49, 'Administrador'),
+(64, 49, 'Vendedor'),
+(67, 56, 'Administrador'),
+(68, 56, 'Vendedor');
 
 -- --------------------------------------------------------
 
@@ -425,8 +449,18 @@ CREATE TABLE `config` (
 
 INSERT INTO `config` (`id`, `empresa`, `nome_sistema`, `telefone_sistema`, `email_sistema`, `tipo_rel`, `dias_bloqueio`, `msg_bloqueio`, `foto_rel`, `tipo_desconto`, `comissao`, `endereco_sistema`, `cnpj_sistema`) VALUES
 (7, 0, 'MultiVendas', '(55) 55555-5555', 'multivendastec@gmail.com', 'PDF', 0, '', NULL, NULL, 0, NULL, NULL),
-(8, 6, 'Loja Cruz', '(00) 00000-0000', '', 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, 'Rua 2', ''),
-(9, 7, 'Sistema de Vendas', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL);
+(19, 44, 'Gabriel Romera', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(20, 45, 'Matheus Almeida', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(21, 46, 'Everton Luan', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(22, 47, 'Monica Mara', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(23, 48, 'Miguel Damasco', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(24, 49, 'Douglas Grillo', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(25, 50, 'Teste 1', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(27, 52, 'Teste2', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(28, 53, 'Teste3', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(29, 54, 'Teste4', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(30, 55, 'Teste5', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL),
+(31, 56, 'Mari', NULL, NULL, 'PDF', 0, NULL, 'logo-rel.jpg', '%', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -599,10 +633,18 @@ CREATE TABLE `empresas` (
 --
 
 INSERT INTO `empresas` (`id`, `nome`, `telefone`, `email`, `cpf`, `cnpj`, `ativo`, `data_cad`, `data_pgto`, `valor`, `endereco`) VALUES
-(2, 'Empresa Teste', '(00) 00000-0000', 'teste@hotmail.com', NULL, NULL, 'Sim', '2023-11-27', NULL, NULL, NULL),
-(6, 'Jonathan', '', 'john.cruz@gmail.com', NULL, NULL, 'Sim', '2023-11-28', NULL, NULL, NULL),
-(7, 'Teste Recuperar', '', 'jpcruz381@gmail.com', NULL, NULL, 'Sim', '2023-11-28', NULL, NULL, NULL),
-(9, 'teste', '', 'teste.test@teste.com', NULL, NULL, 'Sim', '2023-11-29', NULL, NULL, NULL);
+(44, 'Gabriel Romera', '', 'gabriel.romera@aedb.br', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(45, 'Matheus Almeida', '', 'matheus.almeidda@aedb.br', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(46, 'Everton Luan', '', 'everton.luan@aedb.br', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(47, 'Monica Mara', '', 'monica@aedb.br', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(48, 'Miguel Damasco', '', 'miguel.damasco@aedb.br', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(49, 'Douglas Grillo', '', 'douglas.grillo@aedb.br', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(50, 'Teste 1', '', 'teste1@gmail.com', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(52, 'Teste2', '', 'teste2@gmail.com', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(53, 'Teste3', '', 'teste3@gmail.com', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(54, 'Teste4', '', 'teste4@gmail.com', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(55, 'Teste5', '', 'teste5@gmail.com', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', ''),
+(56, 'Mari', '', 'mmmembalagens@gmail.com', '', '', 'Sim', '2023-11-30', '2023-12-02', '90.00', '');
 
 -- --------------------------------------------------------
 
@@ -751,7 +793,20 @@ INSERT INTO `frequencias` (`id`, `empresa`, `frequencia`, `dias`) VALUES
 (15, 6, 'Nenhuma', 0),
 (16, 6, 'Mensal', 30),
 (17, 7, 'Nenhuma', 0),
-(18, 7, 'Mensal', 30);
+(18, 7, 'Mensal', 30),
+(29, 50, 'Nenhuma', 0),
+(30, 52, 'Nenhuma', 0),
+(31, 53, 'Nenhuma', 0),
+(32, 54, 'Nenhuma', 0),
+(33, 55, 'Nenhuma', 0),
+(34, 44, 'Nenhuma', 0),
+(35, 45, 'Nenhuma', 0),
+(36, 46, 'Nenhuma', 0),
+(37, 47, 'Nenhuma', 0),
+(38, 48, 'Nenhuma', 0),
+(39, 49, 'Nenhuma', 0),
+(42, 56, 'Nenhuma', 0),
+(43, 56, 'Mensal', 30);
 
 -- --------------------------------------------------------
 
@@ -1358,12 +1413,18 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `empresa`, `nome`, `telefone`, `cpf`, `email`, `senha`, `senha_crip`, `endereco`, `ativo`, `foto`, `nivel`, `data`) VALUES
 (1, 0, 'MultiVendas', '(55) 55555-5555', '000.000.000-00', 'multivendastec@gmail.com', '123', '202cb962ac59075b964b07152d234b70', '', 'Sim', 'sem-foto.jpg', 'SAS', NULL),
-(3, 2, 'Administrador', NULL, '111.111.111-11', 'teste@hotmail.com', '123', '202cb962ac59075b964b07152d234b70', NULL, 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-27'),
-(12, 6, 'Jonathan Cruz', '', '12345678998', 'john.cruz@gmail.com', '123', '202cb962ac59075b964b07152d234b70', '', 'Sim', '28-11-2023-12-17-46-Jonathan.jpeg', 'Administrador', '2023-11-28'),
-(13, 7, 'Teste Recuperar', NULL, '12345678965', 'jpcruz381@gmail.com', '123', '202cb962ac59075b964b07152d234b70', NULL, 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-28'),
-(14, 7, 'Jonathan Cruz', '(55) 55555-5555', '484.074.848-48', 'jonathan.cruz@aedb.br', '123', '202cb962ac59075b964b07152d234b70', 'Rua Dois 362 - AL', 'Sim', 'sem-foto.jpg', 'Vendedor', '2023-11-28'),
-(15, 7, 'teste senha', '(68) 50488-4848', '484.084.848-04', 'testesenha@gmail.com', '1234', '81dc9bdb52d04dc20036dbd8313ed055', 'Rua Dois', 'Sim', 'sem-foto.jpg', 'Vendedor', '2023-11-28'),
-(17, 9, 'teste', NULL, '40848484840808', 'teste.test@teste.com', '123', 'd9b1d7db4cd6e70935368a1efb10e377', NULL, 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-29');
+(52, 44, 'Gabriel Romera', '', '', 'gabriel.romera@aedb.br', 'bm@paMPxSN', 'fc8e648bafd6fa8a4a64d7e8bf80f89d', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(53, 45, 'Matheus Almeida', '', '', 'matheus.almeidda@aedb.br', 'XyqMKWV7DO', '3c88c02e0cf5d3cdda294023917f1e26', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(54, 46, 'Everton Luan', '', '', 'everton.luan@aedb.br', 'tfjzm1qJzF', '60731616789b70cbfb26d32993bbc378', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(55, 47, 'Monica Mara', '', '', 'monica@aedb.br', 'YJQ@NPImSb', '244029578a24ea6c21ae924e2c4a1922', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(56, 48, 'Miguel Damasco', '', '', 'miguel.damasco@aedb.br', 'w1_L#BI6Fe', 'dfba6ecc6276b52bfc2144c3cbecf2b5', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(57, 49, 'Douglas Grillo', '', '', 'douglas.grillo@aedb.br', '#o27YMkUFA', 'd017ed88d8e00e8066c0ae55e0905657', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(58, 50, 'Teste 1', '', '', 'teste1@gmail.com', 'GR_gHO#OaJ', '9d8fddabcde7d60ccbc118558cfd2d50', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(60, 52, 'Teste2', '', '', 'teste2@gmail.com', 'MYvNhj4zFj', 'd7682be20edf583f868aaf92fb14a0fe', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(61, 53, 'Teste3', '', '', 'teste3@gmail.com', 'mSsDZPYAWR', 'e28dfd04c983ae0fb832b7e937405142', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(62, 54, 'Teste4', '', '', 'teste4@gmail.com', 'WZuV9hH0sO', '0575d4468ea3cc277281c729e93a4695', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(63, 55, 'Teste5', '', '', 'teste5@gmail.com', 'wnsz#dWk8W', 'f25136df3b32bdcfdab6650462a5fd7c', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30'),
+(64, 56, 'Mari', '', '', 'mmmembalagens@gmail.com', 'PX@S9zlt1y', 'c4f82449a3e5698ee5ae3b691bd43b6e', '', 'Sim', 'sem-foto.jpg', 'Administrador', '2023-11-30');
 
 -- --------------------------------------------------------
 
@@ -1626,7 +1687,7 @@ ALTER TABLE `caixas`
 -- AUTO_INCREMENT de tabela `cargos`
 --
 ALTER TABLE `cargos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT de tabela `categorias`
@@ -1644,7 +1705,7 @@ ALTER TABLE `cat_grade`
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de tabela `comissoes`
@@ -1656,7 +1717,7 @@ ALTER TABLE `comissoes`
 -- AUTO_INCREMENT de tabela `config`
 --
 ALTER TABLE `config`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de tabela `contratos`
@@ -1674,7 +1735,7 @@ ALTER TABLE `detalhes_grade`
 -- AUTO_INCREMENT de tabela `empresas`
 --
 ALTER TABLE `empresas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT de tabela `entradas`
@@ -1698,7 +1759,7 @@ ALTER TABLE `fornecedores`
 -- AUTO_INCREMENT de tabela `frequencias`
 --
 ALTER TABLE `frequencias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de tabela `grupo_acessos`
@@ -1722,7 +1783,7 @@ ALTER TABLE `itens_venda`
 -- AUTO_INCREMENT de tabela `pagar`
 --
 ALTER TABLE `pagar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
@@ -1734,7 +1795,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `receber`
 --
 ALTER TABLE `receber`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT de tabela `saidas`
@@ -1758,7 +1819,7 @@ ALTER TABLE `trocas`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios_permissoes`
